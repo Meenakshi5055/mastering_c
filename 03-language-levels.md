@@ -44,6 +44,6 @@ This combination is exactly why C became so important: it's easy enough for huma
 
 ---
 
-[⬅️ Topic 2: History & Creator](./02-history-and-creator.md) |
+[⬅️ Previous topic 2: History & Creator](./02-history-and-creator.md) |
 
- [➡️ Topic 4: Advantages & Disadvantages](./04-advantages-disadvantages.md)
+ [➡️ Next topic 4: Advantages & Disadvantages](./04-advantages-disadvantages.md)
