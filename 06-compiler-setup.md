@@ -33,13 +33,13 @@ Vim / Neovim – Lightweight text editors, mainly used by more experienced progr
 
 Online compilers are the fastest way to start practicing immediately with no setup. Installing an offline setup is better once you're ready to build real projects.
 
-*"Setting Up VS Code (Step-by-Step):**
+**Setting Up VS Code (Step-by-Step):**
 
-*Step 1: Install VS Code*
+* Step 1: Install VS Code*
 . Go to https://code.visualstudio.com.
 . Download the installer for your operating system (Windows/Mac/Linux).
 . Run the installer and follow the on-screen steps (keep default options selected).
-*Step 2: Install a C Compiler (MinGW, for Windows)*
+* Step 2: Install a C Compiler (MinGW, for Windows)*
 . VS Code doesn't compile code by itself — it needs a compiler installed separately.
 . Download MinGW-w64 from https://www.mingw-w64.org (or via MSYS2, a common installer for it).
 . Install it, making sure to note the installation folder (e.g., C:\MinGW\bin).
@@ -49,12 +49,12 @@ Search "Environment Variables" in Windows search.
 . Paste the path to the compiler's bin folder (e.g., C:\MinGW\bin).
 . Click OK on all windows to save.
 . To check it worked, open a terminal (Command Prompt) and type gcc --version. If it shows a version number, the compiler is correctly installed and linked.
-*Step 3: Install VS Code Extensions
+* Step 3: Install VS Code Extensions
 Open VS Code.*
 . Click the Extensions icon on the left sidebar (it looks like four small squares).
 . Search for "C/C++" (by Microsoft) and click Install — this gives you syntax highlighting, error checking, and IntelliSense (auto-suggestions).
 . Search for "Code Runner" and install it — this adds a simple "Run" button so you can execute your C file with one click.
-*Step 4: Create a Project and File*
+* Step 4: Create a Project and File*
 .Create a new folder on your computer for your C projects.
 .In VS Code, go to File → Open Folder, and select that folder.
 . Create a new file inside it named hello.c (the .c extension tells the compiler it's a C file).
