@@ -30,6 +30,17 @@ This single line is made up of 5 tokens:
 * Operators – symbols that perform actions (like +, =, >)
 * Special Symbols – punctuation marks with special meaning (like ;, {, }, (, ))
 
+During the **preprocessing and compilation stages**, the C compiler breaks your source code into a stream of tokens (a process called *Lexical Analysis*). Blank spaces, tabs, and comments are ignored except where they serve to separate tokens.
+
 
 Each of these is covered in detail in the next topics of this module. By the end, you'll be able to look at any C program and immediately recognize every piece it's built from.
+
+
+
+[📋 Module 02 Index](./module-02-.md) | 
+
+[➡️ Next Topic 02: Identifiers](./02-identifiers.md)
+
+
+
 
