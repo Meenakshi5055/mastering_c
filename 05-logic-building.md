@@ -84,6 +84,7 @@ A flowchart is a picture (diagram) that shows an algorithm's steps and their ord
           │     End       │
           ╰─────────────╯
 
-[⬅️ Previous topic 04:Advantages & Disadvantages.md](./04-advantages-disadvantages.md) |
 
-[ ➡️ Next topic 06: Compiler-setup.md](./06-compiler-setup.md)
+[⬅️ Previous Topic: 04-advantages-disadvantages.md](./04-advantages-disadvantages.md) | 
+
+[➡️ Next Topic: 06-compiler-setup.md](./06-compiler-setup.md)
