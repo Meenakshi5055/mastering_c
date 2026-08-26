@@ -25,4 +25,12 @@ An algorithm is a step-by-step method to solve a problem. It's a clear set of in
 **Pseudocode:**
 
 Pseudocode is a way of writing the logic of a program using plain, everyday English, instead of real programming syntax. It helps a programmer plan the logic before worrying about a specific language's rules.
-Example: Pseudocode to check pass/fail based on average marks
+
+*Example:* Pseudocode to check pass/fail based on average marks.
+
+> *Input a set of 4 marks
+> *Calculate their average by summing and dividing by 4
+> *If average is below 50
+    > *print "Fail"
+> *else
+    > *print "Pass"
