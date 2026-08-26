@@ -4,8 +4,8 @@
 ## 📌 Module_1 Navigation
 
 
-1 [1. Definition & Overview](./01-definition-and-overview.md)
-2 [2. History & Creator](./02-history-and-creator.md)
+1  [1. Definition & Overview](./01-definition-and-overview.md)
+2  [2. History & Creator](./02-history-and-creator.md)
 3 [3. Computer Language Levels](./03-language-levels.md)
 4 [4. Advantages & Disadvantages](./04-advantages-disadvantages.md)
 5 [5. Logic Building: Algorithms, Flowcharts, & Pseudocode](./05-logic-building.md)
