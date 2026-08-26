@@ -1,5 +1,5 @@
 # mastering_c
-###A comprehensive, organized C programming starting point for beginners to build strong fundamentals step-by-step.
+ A comprehensive, organized C programming starting point for beginners to build strong fundamentals step-by-step.
 ------
 ## 📌 Golden Rules of C Programming:
 
@@ -19,9 +19,12 @@ Always include required libraries (e.g., `#include <stdio.in>`) at the very top 
 
 Click on any module below to open its detailed lesson page:
 
-* [Module 01: Introduction to C](./module-01.md)
-* [Module 02: C Tokens and Building Blocks](./module-02.md)
-* [Module 03: Data Types and Variables](./module-03.md)
-* [Module 04: Control Flow](./module-04.md)
-* [Module 05: Functions and Scope](./module-05.md)
-
+* [Module 01: Introduction & Environment Setup](./module-01.md)
+* [Module 02: C Tokens & Building Blocks](./module-02.md)
+* [Module 03: Variables, Data Types & Type Conversion](./module-03.md)
+* [Module 04: Control Statements](./module-04.md)
+* [Module 05: Loops & Iteration](./module-05.md)
+* [Module 06: Functions](./module-06.md)
+* [Module 07: Pointers & Memory Management](./module-07.md)
+* [Module 08: Arrays](./module-08.md)
+* [Module 09: Strings](./module-09.md)
