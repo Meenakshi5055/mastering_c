@@ -9,10 +9,14 @@ A computer only understands one language: binary (0s and 1s). But writing progra
 > **1. Low-Level Languages:**
 These are close to the computer's hardware and far from human language.
 * **"Machine Level Language:** Written purely in 0s and 1s. This is the only language the computer's processor directly understands.
+
   ✅Advantage: Runs very fast and uses the computer efficiently, since no translation is needed.
+
   ❌Disadvantage: Extremely hard for humans to read, write, or debug. Also, it's different for every type of processor, so code written for one computer won't work on another.
 * **Assembly Level Language:** Uses short human-readable codes (called mnemonics, like ADD, MOV, SUB) instead of pure binary.
+
   ✅Advantage: Easier to write and understand than machine code.
+
   ❌Disadvantage: Still tied to a specific processor type, and still fairly hard to learn. Needs a translator called an assembler to convert it into machine code.
 
 > **2. High-Level Languages:**
