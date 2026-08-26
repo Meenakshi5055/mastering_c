@@ -32,6 +32,6 @@ Even though C is over 50 years old, it is still one of the most widely used lang
 
 ----
 
-[⬅️ Topic 1: Definition & Overview](./01-definition-and-overview.md) | 
+[⬅️ Previous topic 1: Definition & Overview](./01-definition-and-overview.md) | 
 
 [➡️ Next topic 3: Computer Language Levels](./03-language-levels.md)
