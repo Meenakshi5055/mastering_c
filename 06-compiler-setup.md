@@ -79,4 +79,31 @@ Open VS Code.*
 
 . Create a new file inside it named hello.c (the .c extension tells the compiler it's a C file).
 
-I would recommend VS code because it allows different types of programs in one place by downloading extensions and runs offline.
+I would recommend VS code because it allows different types of programs to run in one place by downloading extensions and runs offline.
+
+**First C Program: "Hello, World!"**
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Print text to the screen
+    printf("Hello, World!\n");
+    return 0;
+}
+
+**Breakdown of the Code:**
+
+* ​#include <stdio.h>: Includes the Standard Input Output library header needed for printf().
+* ​int main(): The main entry point function where program execution begins.
+* ​printf("...");: Built-in C function used to output text inside double quotes to the console.
+* ​\n: Escape sequence for a new line.
+* ​return 0;: Signals to the operating system that the program executed successfully.
+
+**​🎉  Module 01 is completed: Introduction & Environment Setup!**
+
+[⬅️ Previous topic 05:Logic building](./05-logic-building.md) | 
+
+[📋 Module 01 Index]() | 
+
+[➡️ 🚀 Move to Module 02]()
