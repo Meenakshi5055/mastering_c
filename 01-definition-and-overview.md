@@ -4,20 +4,20 @@ C is a general-purpose, procedural programming language. "Procedural" means you 
 
 **Why does C matter?**
 
-1)It's the foundation many other languages (C++, Java, Python's interpreter, etc.) are built on or inspired by.
-2)Operating systems (Linux kernel), embedded systems, and performance-critical software are still written in C.
-3)Learning C teaches you how computers actually work — memory, pointers, compilation — in a way higher-level languages hide from you.
+-It's the foundation many other languages (C++, Java, Python's interpreter, etc.) are built on or inspired by.
+-Operating systems (Linux kernel), embedded systems, and performance-critical software are still written in C.
+-Learning C teaches you how computers actually work — memory, pointers, compilation — in a way higher-level languages hide from you.
 
 **Key characteristics of C:**
 
-1)Compiled language (source code → machine code, via a compiler)
-2)Procedural Language: Code follows a step-by-step sequence of instructions.
-3)Statically typed (you must declare a variable's type)
-4)Fast and Efficient: Compiles directly into binary executable code for maximum speed.
-5)Gives direct access to memory (via pointers)
-6)Small core language, but a rich standard library
-7)Middle-Level Language: Combines human-readable structure with direct hardware manipulation capabilities.
-8)Case-sensitive, uses semicolons to end statements
+-Compiled language (source code → machine code, via a compiler)
+-Procedural Language: Code follows a step-by-step sequence of instructions.
+-Statically typed (you must declare a variable's type)
+-Fast and Efficient: Compiles directly into binary executable code for maximum speed.
+-Gives direct access to memory (via pointers)
+-Small core language, but a rich standard library
+-Middle-Level Language: Combines human-readable structure with direct hardware manipulation capabilities.
+-Case-sensitive, uses semicolons to end statements
 ---
 [⬅️ Module 01 Index](./module-01.md) | 
 
