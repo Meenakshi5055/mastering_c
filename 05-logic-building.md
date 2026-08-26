@@ -14,13 +14,13 @@ An algorithm is a step-by-step method to solve a problem. It's a clear set of in
 
 *Example:* Algorithm to find the average of three numbers.
 
-> *Start
-> *Let a, b, c be three numbers
-> *Display the message "Enter any three integers"
-> *Read three integers and store them in a, b, c
-> *Compute avg = (a + b + c) / 3.0
-> *Display "The average is: avg"
-> *End
+> * Start
+> * Let a, b, c be three numbers
+> * Display the message "Enter any three integers"
+> * Read three integers and store them in a, b, c
+> * Compute avg = (a + b + c) / 3.0
+> * Display "The average is: avg"
+> * End
 
 **Pseudocode:**
 
