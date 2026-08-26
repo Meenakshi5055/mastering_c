@@ -35,3 +35,4 @@ Yes. Depending on the need:
 
 
 **Each alternative trades off some of C's speed or control for more safety or ease of use — which is exactly why C is still chosen when raw performance and hardware access matter most.**
+
