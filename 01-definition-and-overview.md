@@ -22,4 +22,4 @@ C is a general-purpose, procedural programming language. "Procedural" means you 
 ---
 [⬅️ Module 01 Index](./module-01.md) | 
 
-[Next topic 01: History & Creator ➡️](./02-history-and-creator.md)
+[➡️ Next topic 01: History & Creator](./02-history-and-creator.md)
