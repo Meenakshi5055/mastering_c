@@ -54,38 +54,7 @@ A flowchart is a picture (diagram) that shows an algorithm's steps and their ord
 | **Process Symbol** | ▭ *(Rectangle)* | Used for calculations and operations (e.g., `a = b + c`). |
 | **Decision Symbol** | 🔷 *(Diamond)* | Represents a true/false or yes/no question. |
 | **Connectors** | ⚪ *(Circle)* | Connects different parts of a long flowchart together. |
-
----
-
-*Flowchart Example: Even or Odd Check*
-
-```text
-       ╭─────────────╮
-       │    Start      │
-       ╰──────┬──────╯
-              │
-              ▼
-       ┌─────────────┐
-       │  Read num     │
-       └──────┬──────┘
-              │
-              ▼
-              ◆  Is num % 2 == 0 ?
-             ╱ ╲
-     Yes    ╱   ╲    No
-           ▼     ▼
-    ┌───────────┐   ┌───────────┐
-    │ Print Even.|      Print Odd  │
-    └─────┬─────┘   └─────┬─────┘
-          │                 │
-          ╰───────┬───────╯
-                  ▼
-          ╭─────────────╮
-          │     End       │
-          ╰─────────────╯
-
-
----
+----
 
 [⬅️ Previous Topic:04-advantages-disadvantages.md](./04-advantages-disadvantages.md) |
 
