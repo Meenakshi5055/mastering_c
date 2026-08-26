@@ -1,4 +1,4 @@
-### Topic_2 History and Creator 
+## Topic_2 History and Creator 
 **Who created C, and where?**
 
 C was created by Dennis Ritchie, a computer scientist working at Bell Labs (part of AT&T) in the United States. He developed it between 1969 and 1973.
@@ -34,4 +34,4 @@ Even though C is over 50 years old, it is still one of the most widely used lang
 
 [⬅️ Topic 1: Definition & Overview](./01-definition-and-overview.md) | 
 
-[➡️ Topic 3: Computer Language Levels](./03-language-levels.md)
+[➡️ Next topic 3: Computer Language Levels](./03-language-levels.md)
