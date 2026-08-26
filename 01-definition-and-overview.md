@@ -8,7 +8,7 @@ C is a general-purpose, procedural programming language. "Procedural" means you 
 2)Operating systems (Linux kernel), embedded systems, and performance-critical software are still written in C.
 3)Learning C teaches you how computers actually work — memory, pointers, compilation — in a way higher-level languages hide from you.
 
-**Key characteristics of C (at a glance):**
+**Key characteristics of C:**
 
 1)Compiled language (source code → machine code, via a compiler)
 2)Statically typed (you must declare a variable's type)
