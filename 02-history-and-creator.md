@@ -30,7 +30,7 @@ Even though C is over 50 years old, it is still one of the most widely used lang
 
 **C is often called the "mother language" of programming because so many modern languages trace their roots back to it.**
 
---
+----
 
 [⬅️ Topic 1: Definition & Overview](./01-definition-and-overview.md) | 
 
