@@ -34,3 +34,38 @@ Pseudocode is a way of writing the logic of a program using plain, everyday Engl
 > * print "Fail"
 > * else
 > * print "Pass"
+
+**Flowchart:**
+
+A flowchart is a picture (diagram) that shows an algorithm's steps and their order, using standard shapes connected by arrows.
+
+*Why flowcharts are useful:*
+
+* They make it easier to understand a program's logic at a glance.
+* Different shapes represent different types of actions, so the flow of the program is easy to follow visually.
+
+*Standard flowchart symbols:*
+
+| Symbol Name | Visual Shape | Purpose / Description |
+| :--- | :--- | :--- |
+| **Flow Lines** | `→` `←` `↑` `↓` | Connects symbols and shows direction of flow. |
+| **Terminal Symbol** | `([ Start / End ])` | Represents the start or end point of a process. |
+| **Input / Output Symbol** | `[/ Read / Write /]` | Represents inputting data or outputting results. |
+| **Process Symbol** | `[ Calculations ]` | Represents calculations and variable initializations. |
+| **Decision Symbol** | `{ Yes / No ? }` | Represents a decision point (branching paths). |
+| **Connectors** | `(( O ))` | Connects different sections of a flowchart. |
+
+---
+
+### Interactive Flowchart Diagram: Even or Odd Check
+
+> *GitHub automatically renders the diagram below into visual shapes and arrows:*
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Read num/]
+    B --> C{num % 2 == 0}
+    C -- Yes --> D[/Print num is Even/]
+    C -- No --> E[/Print num is Odd/]
+    D --> F([End])
+    E --> F([End])
