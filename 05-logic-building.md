@@ -28,9 +28,9 @@ Pseudocode is a way of writing the logic of a program using plain, everyday Engl
 
 *Example:* Pseudocode to check pass/fail based on average marks.
 
-> *Input a set of 4 marks
-> *Calculate their average by summing and dividing by 4
-> *If average is below 50
-    > *print "Fail"
-> *else
-    > *print "Pass"
+> * Input a set of 4 marks
+> * Calculate their average by summing and dividing by 4
+> * If average is below 50
+    > * print "Fail"
+> * else
+    > * print "Pass"
