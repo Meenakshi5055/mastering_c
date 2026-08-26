@@ -1,6 +1,6 @@
 ## Topic_4 Advantages and Disadvantages 
 
-* **Why C is preferred (Advantages):**
+> **Why C is preferred (Advantages):**
 
 * Fast execution: C code runs close to machine level, so programs execute quickly with very little overhead.
 * Direct memory access: Through pointers, C lets you control memory directly — something most high-level languages don't allow.
@@ -10,7 +10,7 @@
 * Large standard library and community: Decades of use mean tons of documentation, tools, and support are available.
 * Foundation for other languages: Learning C makes it much easier to understand C++, Java, Python, and how computers work internally.
 
-* **Why C is not always preferred (Disadvantages):**
+> **Why C is not always preferred (Disadvantages):**
 
 * No built-in object-oriented support: C doesn't have classes or objects (unlike C++, Java, Python), which makes organizing large, complex programs harder.
 * Manual memory management: The programmer must allocate and free memory themselves. Forgetting this causes bugs like memory leaks or crashes.
@@ -18,11 +18,11 @@
 * No built-in security features: C doesn't automatically check for things like array bounds, which can lead to security vulnerabilities if the programmer isn't careful.
 * Steeper learning curve for beginners: Concepts like pointers and manual memory handling are harder to grasp than in simpler, high-level languages.
 
-**What makes C unique:**
+> **What makes C unique:**
 
 C sits in a rare middle ground — it's readable like a high-level language but gives hardware-level control like a low-level language. Most modern languages pick one side (ease of use or control); C offers both, which is why it's still used for system-level work after 50+ years.
 
-**Are there alternatives to C?**
+> **Are there alternatives to C?**
 
 Yes. Depending on the need:
 * C++:** Adds object-oriented features while keeping C's speed and control.
