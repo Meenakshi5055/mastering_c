@@ -37,7 +37,7 @@ Each of these is covered in detail in the next topics of this module. By the end
 
 
 
-[📋 Module 02 Index](./module-02-.md) | 
+[📋 Module 02 Index](./module-02.md) | 
 
 [➡️ Next Topic 02: Identifiers](./02-identifiers.md)
 
