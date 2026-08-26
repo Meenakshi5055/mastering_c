@@ -6,7 +6,7 @@ A computer only understands one language: binary (0s and 1s). But writing progra
 
 **Two main levels:**
 
-1. Low-Level Languages
+* **1. Low-Level Languages:**
 These are close to the computer's hardware and far from human language.
 * Machine Level Language: Written purely in 0s and 1s. This is the only language the computer's processor directly understands.
 - Advantage: Runs very fast and uses the computer efficiently, since no translation is needed.
