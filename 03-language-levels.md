@@ -31,30 +31,17 @@ It has the readability and structure of a high-level language (easy to write, us
 But it also gives you low-level access to memory and hardware (through pointers), which is normally only possible in low-level languages.
 This combination is exactly why C became so important: it's easy enough for humans to write real programs, but powerful enough to build operating systems and control hardware directly — something pure high-level languages usually can't do as well.
 
-Quick comparison:
+**Quick comparison:**
 
-Level
-Example
-Speed
-Ease of Use
-Portability
-Machine Level
-Binary (0,1)
-Fastest
-Hardest
-None
-Assembly Level
-Mnemonics (ADD, MOV)
-Very Fast
-Hard
-Very Low
-High Level
-C, Python, Java
-Slower
-Easy
-High
-C (Middle Level)
-C
-Fast
-Easy–Moderate
-High
+| Feature | Machine Language | Assembly Language | High-Level Language (C, Python) |
+| :--- | :--- | :--- | :--- |
+| **Syntax** | Binary (`0`s and `1`s) | Mnemonics (`MOV`, `ADD`) | English-like statements |
+| **Hardware Dependence** | Fully Dependent | Fully Dependent | Independent (Portable) |
+| **Execution Speed** | Fastest | Fast | Moderate / Slower |
+| **Translator Needed?** | None | Assembler | Compiler or Interpreter |
+| **Memory Control** | Direct | Direct | Managed / Abbreviated |
+| **Ease of Learning** | Extremely Hard | Hard | Easy to Moderate |
+
+---
+
+[⬅️ Topic 2: History & Creator](./02-history-and-creator.md) | [➡️ Topic 4: Advantages & Disadvantages](./04-advantages-disadvantages.md)
