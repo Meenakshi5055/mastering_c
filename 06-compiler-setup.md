@@ -109,6 +109,6 @@ int main() {
 
 [⬅️ Previous topic 05:Logic building](./05-logic-building.md) | 
 
-[📋 Module 01 Index]() | 
+[📋 Module 01 Index](./module-01.md) | 
 
-[➡️ 🚀 Move to Module 02]()
+[➡️ 🚀 Move to Module 02](./module-02.md)
