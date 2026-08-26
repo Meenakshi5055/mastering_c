@@ -1,12 +1,6 @@
 # mastering_c
 A comprehensive, organized C programming starting point for beginners to build strong fundamentals step-by-step.
-
-
-
-# Mastering C Programming
-
----
-
+------
 ## 📌 Golden Rules of C Programming:
 
 No matter how basic or advanced your program gets, these fundamental rules always apply:
@@ -24,20 +18,14 @@ No matter how basic or advanced your program gets, these fundamental rules alway
 Always include required libraries (e.g., `#include <stdio.in>`) at the very top before using built-in functions like `printf()`.
 
 5. **Block Scope:** Code blocks are enclosed inside curly braces `{ }`. Every opening brace `{` must have a matching closing brace `}`.
-
 ---
-
 ## 🗺️ Roadmap
 
-...[Module 01: Introduction to C](./01-introduction-to-c.md)**
-  - History & Creator
-  - Language Levels (Machine, Low, High)
-  - Advantages & Disadvantages
-- [ ] **[Module 02: C Tokens & Building Blocks](./02-c-tokens.md)**
-  - Keywords & Identifiers
-  - Constants & Literals
-  - Operators & Special Symbols
-  - First C Program
-- [ ] **Module 03: Data Types & Variables**
-- [ ] **Module 04: Control Flow (If-Else, Loops)**
-- [ ] **Module 05: Functions & Scope**
+Click on any module below to open its detailed lesson page:
+
+* [Module 01: Introduction to C](./module-01.md)
+* [Module 02: C Tokens and Building Blocks](./module-02.md)
+* [Module 03: Data Types and Variables](./module-03.md)
+* [Module 04: Control Flow](./module-04.md)
+* [Module 05: Functions and Scope](./module-05.md)
+
