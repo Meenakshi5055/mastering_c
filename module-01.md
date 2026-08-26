@@ -2,12 +2,15 @@
 ### Welcome to Module 01! Use the quick links below to jump directly to any topic in this section.
 ---
 ## 📌 Module_1 Navigation
-* [1. Definition & Overview](#1-definition--overview)
-* [2. History & Creator](#2-history--creator)
-* [3. Computer Language Levels](#3-computer-language-levels)
-* [4. Advantages & Disadvantages](#4-advantages--disadvantages)
-* [5. Logic Building: Algorithms, Flowcharts, & Pseudocode](#5-logic-building-algorithms-flowcharts--pseudocode)
-* [6. Setting Up C & First "Hello World" Program](#6-setting-up-c--first-hello-world-program)
+
+
+* [1. Definition & Overview](./01-definition-and-overview.md)
+* [2. History & Creator](./02-history-and-creator.md)
+* [3. Computer Language Levels](./03-language-levels.md)
+* [4. Advantages & Disadvantages](./04-advantages-disadvantages.md)
+* [5. Logic Building: Algorithms, Flowcharts, & Pseudocode](./05-logic-building.md)
+* [6. Setting Up C & First "Hello World" Program](./06-compiler-setup.md)
+
 ---
 [⬅️ Back to Main Roadmap](./README.md)| 
 
