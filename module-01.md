@@ -9,5 +9,5 @@ Welcome to Module 01! Use the quick links below to jump directly to any topic in
 * [5. Logic Building: Algorithms, Flowcharts, & Pseudocode](#5-logic-building-algorithms-flowcharts--pseudocode)
 * [6. Setting Up C & First "Hello World" Program](#6-setting-up-c--first-hello-world-program)
 ---
----
-[⬅️ Back to Main Roadmap](./README.md)
+[⬅️ Back to Main Roadmap](./README.md)| 
+[➡️ Go to Module 02: C Tokens & Building Blocks](./module-02.md)
