@@ -46,26 +46,40 @@ A flowchart is a picture (diagram) that shows an algorithm's steps and their ord
 
 *Standard flowchart symbols:*
 
-| Symbol Name | Visual Shape | Purpose / Description |
-| :--- | :--- | :--- |
-| **Flow Lines** | `→` `←` `↑` `↓` | Connects symbols and shows direction of flow. |
-| **Terminal Symbol** | `([ Start / End ])` | Represents the start or end point of a process. |
-| **Input / Output Symbol** | `[/ Read / Write /]` | Represents inputting data or outputting results. |
-| **Process Symbol** | `[ Calculations ]` | Represents calculations and variable initializations. |
-| **Decision Symbol** | `{ Yes / No ? }` | Represents a decision point (branching paths). |
-| **Connectors** | `(( O ))` | Connects different sections of a flowchart. |
+| Symbol Name | Actual Visual Shape | Purpose / Description |
+| :--- | :---: | :--- |
+| **Flow Lines** | ➡️ ⬇️ | Connects symbols and shows direction. |
+| **Terminal Symbol** | 🛑 *(Oval)* | Indicates the **Start** or **End** of a flowchart. |
+| **Input / Output** | ▰ *(Parallelogram)* | Used for reading inputs (`Read`) or printing outputs (`Print`). |
+| **Process Symbol** | ▭ *(Rectangle)* | Used for calculations and operations (e.g., `a = b + c`). |
+| **Decision Symbol** | 🔷 *(Diamond)* | Represents a true/false or yes/no question. |
+| **Connectors** | ⚪ *(Circle)* | Connects different parts of a long flowchart together. |
 
 ---
 
-### Interactive Flowchart Diagram: Even or Odd Check
+*Flowchart Example: Even or Odd Check*
 
-> *GitHub automatically renders the diagram below into visual shapes and arrows:*
-
-```mermaid
-flowchart TD
-    A([Start]) --> B[/Read num/]
-    B --> C{num % 2 == 0}
-    C -- Yes --> D[/Print num is Even/]
-    C -- No --> E[/Print num is Odd/]
-    D --> F([End])
-    E --> F([End])
+```text
+       ╭─────────────╮
+       │    Start      │
+       ╰──────┬──────╯
+              │
+              ▼
+       ┌─────────────┐
+       │  Read num     │
+       └──────┬──────┘
+              │
+              ▼
+              ◆  Is num % 2 == 0 ?
+             ╱ ╲
+     Yes    ╱   ╲    No
+           ▼     ▼
+    ┌───────────┐   ┌───────────┐
+    │ Print Even.|      Print Odd  │
+    └─────┬─────┘   └─────┬─────┘
+          │                 │
+          ╰───────┬───────╯
+                  ▼
+          ╭─────────────╮
+          │     End       │
+          ╰─────────────╯
