@@ -92,6 +92,8 @@ int main() {
     return 0;
 }
 
+---
+
 **Breakdown of the Code:**
 
 * ​#include <stdio.h>: Includes the Standard Input Output library header needed for printf().
@@ -99,6 +101,8 @@ int main() {
 * ​printf("...");: Built-in C function used to output text inside double quotes to the console.
 * ​\n: Escape sequence for a new line.
 * ​return 0;: Signals to the operating system that the program executed successfully.
+
+---
 
 **​🎉  Module 01 is completed: Introduction & Environment Setup!**
 
