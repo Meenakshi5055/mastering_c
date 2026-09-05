@@ -1,7 +1,7 @@
 ## Topic_1 Introduction and Overview 
 **What is C?**
 
-C is a general-purpose, procedural programming language. "Procedural" means you write a program as a sequence of steps (procedures/functions) that run one after another — as opposed to, say, purely object-oriented styles. It is designed to be concise, compile directly to machine code, and provide low-level access to memory.C lets you control the computer's memory and hardware very directly, which is why it's often called a "middle-level" language (more on that in subtopic 3).
+C is a general-purpose, procedural programming language. "Procedural" means you write a program as a sequence of steps (procedures/functions) that run one after another — as opposed to say purely object-oriented styles. It is designed to be concise, compile directly to machine code, and provide low-level access to memory.C lets you control the computer's memory and hardware very directly, which is why it's often called a "middle-level" language (more on that in subtopic 3).
 
 **Why does C matter?**
 
@@ -22,4 +22,4 @@ C is a general-purpose, procedural programming language. "Procedural" means you 
 ---
 [⬅️ Module 01 Index](./module-01.md) | 
 
-[➡️ Next topic 01: History & Creator](./02-history-and-creator.md)
+[➡️ Next topic 02: History & Creator](./02-history-and-creator.md)
