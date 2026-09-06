@@ -3,6 +3,12 @@
 
 C is a general-purpose, procedural programming language. "Procedural" means you write a program as a sequence of steps (procedures/functions) that run one after another — as opposed to say purely object-oriented styles. It is designed to be concise, compile directly to machine code, and provide low-level access to memory.C lets you control the computer's memory and hardware very directly, which is why it's often called a "middle-level" language (more on that in subtopic 3).
 
+**Learning objectives:**
+
+* Understand what C is and where it's used.
+* Know the core characteristics that distinguish C from higher-level languages.
+* See a minimal example and know how to compile a simple program.
+
 **Why does C matter?**
 
 - It's the foundation many other languages (C++, Java, Python's interpreter, etc.) are built on or inspired by.
@@ -11,7 +17,7 @@ C is a general-purpose, procedural programming language. "Procedural" means you 
 
 **Key characteristics of C:**
 
-- Compiled language (source code → machine code, via a compiler)
+- Compiled language: source (.c) -> source code → machine code, via a compiler (gcc/clang).
 - Procedural Language: Code follows a step-by-step sequence of instructions.
 - Statically typed (you must declare a variable's type)
 - Fast and Efficient: Compiles directly into binary executable code for maximum speed.
