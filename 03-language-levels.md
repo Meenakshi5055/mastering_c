@@ -1,14 +1,22 @@
-## Topic_3 Computer languages 
+## Topic 3: Computer Languages
+
+**Learning Objectives**
+- Understand why different programming language levels exist.
+- Distinguish between machine, assembly, and high-level languages.
+- Recognize where C fits in the language hierarchy.
+- Know the trade-offs between language levels.
+
+---
 
 **Why do different types of languages exist?**
 
-A computer only understands one language: binary (0s and 1s). But writing programs directly in 0s and 1s is very hard for humans. So, over time, programmers created languages that are easier for people to write, and then built tools to convert those languages back into binary for the computer to run. This is why programming languages are grouped into levels — based on how close they are to human language versus machine language.
+A computer only understands one language: binary (0s and 1s). But writing programs directly in 0s and 1s is very hard for humans. So, over time, programmers created languages that are easier for people to understand and write.
 
 **Two main levels:**
 
 > **1. Low-Level Languages:**
 These are close to the computer's hardware and far from human language.
-* **"Machine Level Language:** Written purely in 0s and 1s. This is the only language the computer's processor directly understands.
+* **Machine Level Language:** Written purely in 0s and 1s. This is the only language the computer's processor directly understands.
 
   ✅Advantage: Runs very fast and uses the computer efficiently, since no translation is needed.
 
@@ -31,14 +39,15 @@ These are close to human language (English-like) and far from machine language. 
 
 **Where does C fit in?**
 
-C is called a middle-level language. This means:
-It has the readability and structure of a high-level language (easy to write, uses English-like keywords like if, while, return).
-But it also gives you low-level access to memory and hardware (through pointers), which is normally only possible in low-level languages.
-This combination is exactly why C became so important: it's easy enough for humans to write real programs, but powerful enough to build operating systems and control hardware directly — something pure high-level languages usually can't do as well.
+C is called a **middle-level language**. This means:
+- It has the readability and structure of a high-level language (easy to write, uses English-like keywords like `if`, `while`, `return`).
+- But it also gives you low-level access to memory and hardware (through pointers), which is normally only possible in low-level languages.
+
+This combination is exactly why C became so important: it's easy enough for humans to write real programs, but powerful enough to build operating systems and control hardware directly.
 
 **Quick comparison:**
 
-| Feature | Machine Language | Assembly Language | High-Level Language (C, Python) |
+| Feature | Machine Language | Assembly Language | High-Level Language (C) |
 | :--- | :--- | :--- | :--- |
 | **Syntax** | Binary (`0`s and `1`s) | Mnemonics (`MOV`, `ADD`) | English-like statements |
 | **Hardware Dependence** | Fully Dependent | Fully Dependent | Independent (Portable) |
@@ -49,6 +58,19 @@ This combination is exactly why C became so important: it's easy enough for huma
 
 ---
 
+## Exercises
+1. Why is C called a "middle-level language"?
+2. Give an example of a task best suited for assembly language vs. C.
+3. In the comparison table, which language would you choose to control an embedded device? Why?
+
+## Key takeaways
+- Machine language is the only language computers truly understand, but humans need easier options.
+- Assembly is a step up, but still hardware-dependent and complex.
+- High-level languages prioritize human readability and portability.
+- C bridges the gap, offering high-level convenience with low-level control.
+
+---
+
 [⬅️ Previous topic 2: History & Creator](./02-history-and-creator.md) |
 
- [➡️ Next topic 4: Advantages & Disadvantages](./04-advantages-disadvantages.md)
+[➡️ Next topic 4: Advantages & Disadvantages](./04-advantages-disadvantages.md)
