@@ -20,13 +20,13 @@ C is a general-purpose, procedural programming language. "Procedural" means writ
 
 **Key characteristics of C:**
 
-- Compiled language: source (.c)  source code → machine code(via a compiler) (gcc/clang).
-- Procedural Language: Code follows a step-by-step sequence of instructions.
+- Compiled language: source (.c) is translated into machine code by a compiler. (e.g.,gcc/clang).
+- Procedural Language: code follows a step-by-step sequence of instructions.
 - Statically typed (you must declare a variable's type)
 - Fast and Efficient: Compiles directly into binary executable code for maximum speed.
 - Gives direct access to memory (via pointers)
 - Small core language, but a rich standard library
-- Middle-Level Language: Combines human-readable structure with direct hardware manipulation capabilities.
+- Middle-level language: Combines human-readable structure with direct hardware manipulation capabilities.
 - Case-sensitive, uses semicolons to end statements
 ---
 [⬅️ Module 01 Index](./module-01.md) | 
