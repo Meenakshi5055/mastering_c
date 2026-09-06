@@ -1,7 +1,7 @@
 # Module 01: Introduction & Environment Setup
 ### Welcome to Module 01! Use the quick links below to jump directly to any topic in this section.
 ---
-## 📌 Module_1 Navigation
+## 📌 Module 01 Navigation
 
 
 * [1. Definition & Overview](./01-definition-and-overview.md)
