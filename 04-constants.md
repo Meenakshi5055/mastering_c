@@ -1,5 +1,6 @@
 # 🔢 04 · Constants in C
 
+<div align="center">
 
 [![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![Level](https://img.shields.io/badge/Level-Beginner-2ea44f?style=for-the-badge)](#)
@@ -8,6 +9,7 @@
 
 ### 🔒 A constant is a fixed value that does not change during program execution.
 
+</div>
 
 > 💡 **Simple idea:** `25`, `3.14`, `'A'`, and `"Hello"` are values written directly in a C program.
 
@@ -15,7 +17,7 @@
 
 ## 🧠 What is a constant?
 
-A **constant** is a value that remains fixed while a program is running. For example, `25` is an integer constant in the following statement:
+A **constant** is a value that remains fixed while a program is running. For example, `25` is an integer constant:
 
 ```c
 int age = 25;
@@ -66,7 +68,6 @@ An integer constant is a whole number without a fractional part. It may be posit
 
 int main(void) {
     int decimal_number = 25;
-
     printf("Decimal value: %d\\n", decimal_number);
     return 0;
 }
@@ -90,7 +91,6 @@ Decimal value: 25
 
 int main(void) {
     int octal_number = 010;
-
     printf("Octal value: %o\\n", octal_number);
     printf("Decimal value: %d\\n", octal_number);
     return 0;
@@ -118,7 +118,6 @@ Decimal value: 8
 
 int main(void) {
     int hexadecimal_number = 0x1A;
-
     printf("Hexadecimal value: %X\\n", hexadecimal_number);
     printf("Decimal value: %d\\n", hexadecimal_number);
     return 0;
@@ -140,35 +139,20 @@ A constant does not have a format specifier by itself. **Format specifiers are u
 |---|---|---|
 | Decimal `int` | `%d` or `%i` | `printf("%d", number);` |
 | Octal `int` | `%o` | `printf("%o", number);` |
-| Hexadecimal `int` lowercase | `%x` | `printf("%x", number);` |
-| Hexadecimal `int` uppercase | `%X` | `printf("%X", number);` |
+| Hexadecimal lowercase | `%x` | `printf("%x", number);` |
+| Hexadecimal uppercase | `%X` | `printf("%X", number);` |
 | Unsigned decimal | `%u` | `printf("%u", number);` |
 | `long int` | `%ld` | `printf("%ld", number);` |
 | `long long int` | `%lld` | `printf("%lld", number);` |
 
-> ✅ `%i` and `%d` both display a decimal `int` with `printf()`. In `scanf()`, `%i` can also detect decimal, octal, or hexadecimal input from its prefix, while `%d` reads decimal input.
+> ✅ `%i` and `%d` both display a decimal `int` with `printf()`. In `scanf()`, `%i` can detect the base from a prefix, while `%d` reads decimal input.
 
 ## B) Real (Floating-point) Constants 🌊
 
 A real constant represents a number with a fractional part or a number written in exponential notation.
 
-### Decimal form
-
-Examples: `3.14`, `0.001`, `-25.5`, `.5`, and `5.`
-
-### Exponential form
-
-The pattern is:
-
-```text
-mantissa e exponent
-```
-
-Examples:
-
-- `2.5e3` means `2.5 × 10³`, which is `2500`.
-- `1.2E-4` means `1.2 × 10⁻⁴`, which is `0.00012`.
-- `1e3` means `1000`.
+- Decimal examples: `3.14`, `0.001`, `-25.5`, `.5`, and `5.`
+- Exponential examples: `2.5e3` means `2500`; `1.2E-4` means `0.00012`; `1e3` means `1000`.
 
 By default, a floating-point constant has type `double`. Add `f` or `F` for `float`, or `L` for `long double`.
 
@@ -187,8 +171,6 @@ int main(void) {
 }
 ```
 
-### 🖨️ Format specifiers for real values
-
 | Type | `printf()` specifier | Example |
 |---|---|---|
 | `float` or `double` | `%f` | `printf("%f", value);` |
@@ -196,7 +178,7 @@ int main(void) {
 | Shortest suitable form | `%g` or `%G` | `printf("%g", value);` |
 | `long double` | `%Lf` | `printf("%Lf", value);` |
 
-> 🎯 Precision can be selected with a number after `%`. For example, `%.2f` displays two digits after the decimal point.
+> 🎯 `%.2f` displays two digits after the decimal point.
 
 ---
 
@@ -208,23 +190,67 @@ Character constants represent characters or text. They are divided into **single
 
 - Contain one character.
 - Are enclosed in **single quotes**.
-- Examples: `'A'`, `'5'`, `'$'`.
+- Examples: `'A'`, `'5'`, and `'$'`.
 - Escape sequences such as `'\\n'` and `'\\t'` also represent one character.
+
+> ⚠️ **Important:** The backslash (`\\`) introduces an **escape sequence**. Escape sequences are written inside character constants or string literals to represent control characters and characters that are difficult to type directly.
+
+### 🧩 Escape sequences you should remember
+
+| Escape sequence | Name | Meaning |
+|---|---|---|
+| `\\a` | Alert / bell | Produces an alert sound if supported |
+| `\\b` | Backspace | Moves the cursor one position backward |
+| `\\f` | Form feed / page feed | Advances to the next page on supported devices |
+| `\\n` | Newline | Moves the cursor to the beginning of the next line |
+| `\\r` | Carriage return | Moves the cursor to the beginning of the current line |
+| `\\t` | Horizontal tab | Moves the cursor to the next horizontal tab stop |
+| `\\v` | Vertical tab | Moves the cursor to the next vertical tab stop |
+| `\\\\` | Backslash | Represents one literal backslash (`\\`) |
+| `\\'` | Single quote | Represents a single quote (`'`) |
+| `\\\"` | Double quote | Represents a double quote (`\"`) |
+| `\\?` | Question mark | Represents a question mark (`?`) |
+| `\\0` | Null character | Marks the end of a C string; value is zero |
+| `\\ooo` | Octal character code | Character represented by one to three octal digits |
+| `\\xhh` | Hexadecimal character code | Character represented by hexadecimal digits |
+
+> 📝 **Terminology note:** `\\f` is called **form feed**. Some books also call it **page feed**. `\\r` is carriage return, `\\n` is newline, and `\\b` is backspace—they are different escape sequences.
+
+### ✅ Escape-sequence example program
 
 ```c
 #include <stdio.h>
 
 int main(void) {
-    char grade = 'A';
-    char newline = '\\n';
-
-    printf("Grade: %c\\n", grade);
-    printf("The next output begins after a newline.%c", newline);
+    printf("1. Newline\\n2. Horizontal tab\\tDone\\n");
+    printf("3. Carriage return: ABC\\rXYZ\\n");
+    printf("4. Backslash: \\\\\\n");
+    printf("5. Single quote: \\\'\\n");
+    printf("6. Double quote: \\\"\\n");
+    printf("7. Question mark: \\?\\n");
+    printf("8. Alert: \\a\\n");
     return 0;
 }
 ```
 
-**Format specifier:** Use `%c` with `printf()` to display a character.
+> 💡 `\\n` and `\\t` are the most frequently used in beginner programs. The visible effect of `\\a`, `\\b`, `\\f`, `\\r`, and `\\v` depends on the terminal or output device.
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    char newline = '\\n';
+    char tab = '\\t';
+    char quote = '\'';
+    char backslash = '\\\\';
+
+    printf("Line one%c%sLine two%cDone%c", newline, "", newline, tab);
+    printf("%c%c%c%c\\n", quote, tab, backslash, quote);
+    return 0;
+}
+```
+
+**Format specifier:** Use `%c` with `printf()` to display a single character.
 
 > ⚠️ `'5'` is a character constant, not the integer constant `5`. The first is displayed with `%c`; the second is displayed with `%d`.
 
@@ -240,17 +266,16 @@ C automatically stores a null character, `\\0`, at the end of a string in a char
 #include <stdio.h>
 
 int main(void) {
-    char message[] = "Hello";
-
-    printf("%s\\n", message);
+    char message[] = "Hello\\nWorld";
+    printf("%s", message);
     return 0;
 }
 ```
 
-The array contains:
+The array contains the characters of the text, followed by `\\0`:
 
 ```text
-'H'  'e'  'l'  'l'  'o'  '\0'
+'H'  'e'  'l'  'l'  'o'  '\\n'  'W'  'o'  'r'  'l'  'd'  '\\0'
 ```
 
 **Format specifier:** Use `%s` with `printf()` to display a string.
@@ -259,25 +284,28 @@ The array contains:
 
 ---
 
-## 📏 Complete rules for constants
+## 📏 Complete rules for constants and escape sequences
 
-1. C constants are classified here into two main categories: **numeric constants** and **character constants**.
-2. Numeric constants contain integer constants and real (floating-point) constants.
+1. C constants are classified into numeric constants and character constants.
+2. Numeric constants contain integer and real (floating-point) constants.
 3. Integer constants may be decimal, octal, or hexadecimal.
 4. Decimal integer constants use digits `0`–`9` and have no prefix.
 5. Octal integer constants begin with `0` and use only digits `0`–`7`.
 6. Hexadecimal integer constants begin with `0x` or `0X` and use digits `0`–`9` and letters `A`–`F` or `a`–`f`.
 7. An integer constant cannot contain a decimal point, exponent, or spaces.
-8. An integer constant can have an integer suffix such as `U`, `L`, or `LL`, for example `25U` or `100L`.
+8. An integer constant can have suffixes such as `U`, `L`, or `LL`, for example `25U` or `100L`.
 9. A real constant can use decimal notation or exponential notation.
-10. A real constant must contain digits appropriately around its decimal point or contain an exponent; forms such as `.5`, `5.`, and `1e3` are valid C forms.
-11. A floating-point constant is `double` by default. Use `f`/`F` for `float` and `l`/`L` for `long double`.
-12. A single character constant is enclosed in single quotes, such as `'A'`.
-13. A string constant is enclosed in double quotes, such as `"Hello"`.
-14. A character constant represents one character; a string constant represents a sequence of characters.
-15. A string stored in a character array ends with the null character `\\0`.
-16. Format specifiers are used to display constants and variables with input/output functions; they are not part of the constant itself.
-17. Use `%d`, `%i`, `%o`, and `%x`/`%X` for common integer output; use `%f`, `%e`, `%g`, `%c`, and `%s` for floating-point, character, and string output.
+10. A floating-point constant is `double` by default. Use `f`/`F` for `float` and `l`/`L` for `long double`.
+11. A single character constant is enclosed in single quotes, such as `'A'`.
+12. A string constant is enclosed in double quotes, such as `"Hello"`.
+13. A character constant represents one character; a string constant represents a sequence of characters.
+14. A string stored in a character array ends with the null character `\\0`.
+15. An escape sequence begins with a backslash, such as `\\n`, `\\t`, or `\\\\`.
+16. Use `\\'` for a single quote, `\\\"` for a double quote, `\\?` for a question mark, and `\\\\` for a literal backslash.
+17. Use `\\a`, `\\b`, `\\f`, `\\n`, `\\r`, `\\t`, and `\\v` for standard control characters.
+18. Escape sequences may appear inside character constants and string literals.
+19. `\\0` is the null character used to terminate strings; it is not the same as the character `'0'`.
+20. Format specifiers belong to functions such as `printf()` and are not part of the constant itself.
 
 ---
 
@@ -291,6 +319,7 @@ Identify each constant and choose a suitable `printf()` format specifier:
 0x2A     // Hexadecimal integer: %x or %X
 3.14     // Real constant: %f
 'A'      // Single character constant: %c
+'\\n'     // Escape-sequence character constant: %c
 "Hello"  // String constant: %s
 ```
 
@@ -300,6 +329,9 @@ Identify each constant and choose a suitable `printf()` format specifier:
 1. Which value represents decimal `10` in octal notation? **`012`** ✅
 2. Which specifier displays an integer in hexadecimal notation? **`%x` or `%X`** ✅
 3. Which is a string: `'C'` or `"C"`? **`"C"`** ✅
+4. Which escape sequence moves to the next line? **`\\n`** ✅
+5. Which escape sequence represents a literal backslash? **`\\\\`** ✅
+6. Which escape sequence is used for a double quote inside a string? **`\\\"`** ✅
 
 </details>
 
@@ -314,17 +346,18 @@ Identify each constant and choose a suitable `printf()` format specifier:
 | Numeric | Hexadecimal integer | `0x64` | `%x` or `%X` |
 | Numeric | Real constant | `3.14` | `%f` |
 | Character | Single character | `'A'` | `%c` |
+| Character | Escape sequence | `'\\n'` | `%c` |
 | Character | String constant | `"Hello"` | `%s` |
 
 ---
 
 <div align="center">
 
-### 🎉 You can now classify, write, print, and recognize constants in C!
+### 🎉 You can now classify, write, print, and recognize constants and escape sequences in C!
 
 </div>
 
-<!-- The table below is used only for navigation alignment, not for the badges. -->
+<!-- This table is only for left/right page navigation, not for badge alignment. -->
 <table width="100%">
 <tr>
 <td align="left">⬅️ <a href="03-keywords.md">03 · Keywords</a></td>
