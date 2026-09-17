@@ -1,6 +1,5 @@
 # 🔢 04 · Constants in C
 
-<div align="center">
 
 [![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![Level](https://img.shields.io/badge/Level-Beginner-2ea44f?style=for-the-badge)](#)
@@ -9,7 +8,6 @@
 
 ### 🔒 A constant is a fixed value that does not change during program execution.
 
-</div>
 
 > 💡 **Simple idea:** `25`, `3.14`, `'A'`, and `"Hello"` are values written directly in a C program.
 
