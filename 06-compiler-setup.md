@@ -1,176 +1,125 @@
-## Setting up the environment and first C program
+# Topic 6: Compiler Setup & Your First C Program
 
-To write and run C programs, you need two things: a compiler (which converts C source code into an executable program) and, usually, an editor or IDE (a place to write your code comfortably). Here are the basics you need to get started.
+## Learning objectives
 
-C is a compiled language. Unlike interpreted languages, C source code must be converted into an executable file before it can run.
+By the end of this topic, you should be able to:
 
----
+- explain the role of a compiler and editor
+- verify that a C compiler is installed
+- compile and run a C program from a terminal
+- understand the basic parts of a Hello World program
 
-### The 4 Stages of Compilation:
+## Compiler and editor
 
-1. **Preprocessing (`.c` -> `.i`)**: Removes comments and expands macros and header files (for example, `#include <stdio.h>`).
-2. **Compilation (`.i` -> `.s`)**: Translates the preprocessed code into assembly code.
-3. **Assembly (`.s` -> `.o` / `.obj`)**: Converts the assembly code into binary machine object code.
-4. **Linking (`.o` -> `.exe`)**: Combines the object code with the C standard library to create the final executable file.
+A **text editor** or IDE is where you write source code. A **compiler** translates C source code into an executable program. An IDE may combine editing, compiling, debugging, and project tools, but an editor alone is not a compiler.
 
----
+## The four compilation stages
 
-### Environment Setup:
+1. **Preprocessing:** Expands headers and macros and removes comments.
+2. **Compilation:** Converts preprocessed C into assembly code.
+3. **Assembly:** Converts assembly into an object file.
+4. **Linking:** Combines object files and libraries into an executable.
 
-#### Available tools to write and run C
+## Choose an environment
 
-> **Offline (installed on your computer):**
+- **VS Code:** Lightweight editor; install a C compiler separately.
+- **Code::Blocks:** Beginner-friendly IDE; choose a current distribution with a compiler.
+- **Online compilers:** Programiz, OnlineGDB, and OneCompiler are useful for quick practice.
 
-- **VS Code** – A free, lightweight code editor. It needs a separate compiler installed, plus extensions.
-- **Code::Blocks** – A free IDE made specifically for C/C++. It comes bundled with a compiler, so setup is easier.
-- **Dev-C++** – Another beginner-friendly IDE with a bundled compiler.
-- **Turbo C++** – An older compiler that is not recommended for beginners today because it does not support modern systems well.
-- **Vim / Neovim** – Lightweight text editors mainly used by experienced programmers who prefer working from the terminal.
+Avoid relying on Turbo C for modern learning because it is obsolete and does not represent current C toolchains.
 
-> **Online (no installation needed, runs in the browser):**
+## Install a compiler
 
-- **Programiz** – A simple online C compiler, good for quick practice.
-- **OnlineGDB** – Lets you write, run, and debug C code online.
-- **OneCompiler** – Another browser-based compiler for quick testing.
+### Windows
 
-Online compilers are great for practicing immediately without setup, but an offline setup is better once you are ready to build real projects.
-
----
-
-### Setting Up VS Code (Step-by-Step):
-
-**Step 1: Install VS Code**
-
-- Go to https://code.visualstudio.com.
-- Download the installer for your operating system (Windows, macOS, or Linux).
-- Run the installer and follow the on-screen steps, keeping the default options selected.
-
-**Step 2: Install a C Compiler**
-
-VS Code itself does not compile code. It needs a compiler installed separately.
-
-#### For Windows
-
-- Download **MinGW-w64** from https://www.mingw-w64.org or install it using **MSYS2**.
-- Install it and note the installation folder (for example, `C:\MinGW\bin`).
-- Add the compiler folder to your `PATH` so your computer can find `gcc` from any terminal.
-- To do this:
-  - Search for **Environment Variables** in the Windows search bar.
-  - Under **System variables**, find **Path** and click **Edit**.
-  - Add the path to the compiler's `bin` folder (for example, `C:\MinGW\bin`).
-  - Click **OK** to save.
-- Check if it worked by opening Command Prompt and typing:
+Install a current GCC toolchain such as **MSYS2 MinGW-w64**, then ensure its compiler directory is available in `PATH`. Open a new terminal and verify:
 
 ```bash
 gcc --version
 ```
 
-If a version number appears, the compiler is installed correctly.
+### macOS
 
-#### For macOS
-
-- Open the Terminal app.
-- Install the Xcode Command Line Tools by running:
+Install Apple’s Command Line Tools:
 
 ```bash
 xcode-select --install
 ```
 
-- After installation, check the compiler:
+Then verify the compiler:
 
 ```bash
+clang --version
 gcc --version
 ```
 
-If the command works, your compiler is ready.
+On modern macOS systems, `gcc` may point to Apple Clang rather than GNU GCC; that is fine for compiling standard C programs.
 
-#### For Linux
-
-On Ubuntu or Debian-based systems, you can install the compiler using:
+### Ubuntu or Debian
 
 ```bash
 sudo apt update
 sudo apt install build-essential
-```
-
-Then verify it with:
-
-```bash
+cc --version
 gcc --version
 ```
 
-If the version is displayed, the compiler is installed and working.
+## Write your first program
 
-**Step 3: Install VS Code Extensions**
-
-- Open VS Code.
-- Click the **Extensions** icon in the left sidebar (it looks like four small squares).
-- Search for **C/C++** by Microsoft and click **Install**.
-  - This gives you syntax highlighting, error checking, and IntelliSense.
-- Search for **Code Runner** and install it.
-  - This adds a simple **Run** button to execute your C file with one click.
-
-**Step 4: Create a Project and File**
-
-- Create a new folder on your computer for your C projects.
-- In VS Code, go to **File → Open Folder** and select that folder.
-- Create a new file inside it named `hello.c`.
-  - The `.c` extension tells the compiler that this is a C source file.
-
-*I recommend VS Code because it is lightweight, flexible, and supports many tools and extensions. It works well for beginner projects and larger programs too.*
-
----
-
-### First C Program: "Hello, World!"
+Create a file named `hello.c`:
 
 ```c
 #include <stdio.h>
 
-int main() {
-    // Print text to the screen
+int main(void) {
     printf("Hello, World!\n");
     return 0;
 }
 ```
 
-**How to run it:**
-
-#### Windows
+Compile with warnings enabled:
 
 ```bash
-gcc hello.c -o hello.exe
-hello.exe
+gcc -std=c17 -Wall -Wextra -pedantic hello.c -o hello
 ```
 
-#### macOS / Linux
+Run it on macOS or Linux:
 
 ```bash
-gcc hello.c -o hello
 ./hello
 ```
 
-You should see:
+On Windows, the executable may be named `hello.exe`:
 
 ```bash
+hello.exe
+```
+
+Expected output:
+
+```text
 Hello, World!
 ```
 
+## Code breakdown
+
+- `#include <stdio.h>` provides the declaration for `printf`.
+- `int main(void)` defines the program entry point and says it accepts no arguments.
+- `printf` writes text to standard output.
+- `\n` moves the cursor to a new line.
+- `return 0` indicates successful completion.
+
+## Troubleshooting
+
+- If `gcc` or `clang` is not found, install a compiler and check your `PATH`.
+- If compilation reports warnings, read them before running the program.
+- If the executable does not run, use the platform-specific command above.
+- Make sure the file is saved as `hello.c`, not `hello.c.txt`.
+
+## Module checkpoint
+
+You are ready for Module 02 when you can explain what a compiler does and compile the Hello World program without copying commands blindly.
+
 ---
 
-### Breakdown of the Code:
-
-- `#include <stdio.h>`: Includes the Standard Input Output library, which provides functions like `printf()`.
-- `int main()`: The main function where the program starts running.
-- `printf("...")`: Prints text to the console.
-- `\n`: Escape sequence for a new line.
-- `return 0;`: Tells the operating system that the program executed successfully.
-
----
-
-**🎉 Module 01 is completed: Introduction & Environment Setup!**
-
-[⬅️ Previous topic 05: Logic Building](./05-logic-building.md) | 
-
-[📋 Module 01 Index](./module-01.md) | 
-
-[➡️ 🚀 Move to Module 02](./module-02.md)
+[⬅️ Previous topic: Logic Building](./05-logic-building.md) | [📋 Module 01 Index](./module-01.md) | [➡️ Module 02](./module-02.md)

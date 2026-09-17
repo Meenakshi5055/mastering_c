@@ -1,56 +1,53 @@
-# Topic 2 — History and Creator
+# Topic 2: History & Creator
 
-Learning objectives
-- Know who created C and why.
-- Understand the relationship between B, C, and Unix.
-- Recognize the major milestones in C’s standardization.
-- See where C is used today and why it remains important.
+## Learning objectives
 
-## Who created C, and where?
-C was created by Dennis Ritchie at Bell Labs (AT&T) in the United States. Development began in the late 1960s and continued through the early 1970s; the language was mostly completed by 1972–1973.
+- identify who created C and where it was developed
+- understand the connection between B, C, and Unix
+- recognize important C standardization milestones
+- explain why C became influential
 
-## With whom, and why?
-Dennis Ritchie worked closely with Ken Thompson. Thompson had developed an earlier language called B. The two were working on the Unix operating system at Bell Labs and needed a language that combined the expressiveness of a high-level language with the control and efficiency of low-level code. C evolved to meet those needs.
+## Who created C?
 
-## What was C first used for?
-The first major use of C was to rewrite the Unix operating system. Originally Unix was written in assembly; converting Unix to C in the early 1970s made the system easier to maintain and port to different hardware.
+C was developed by **Dennis Ritchie** at Bell Labs in the United States. Development took place mainly between 1969 and 1973. **Ken Thompson**, who created the earlier B language, also strongly influenced its development.
 
-## Timeline — Major milestones
-- 1969–1973: Early development of C at Bell Labs (Ritchie & Thompson).
-- 1978: Brian Kernighan and Dennis Ritchie published The C Programming Language (the "K&R" book). This version is commonly called K&R C.
-- 1989 / 1990: ANSI standardization (commonly called ANSI C or C89/C90).
-- 1999: C99 standard – new features and cleaner syntax.
-- 2011: C11 standard – introduced features for concurrency and improved library support.
-- 2017: C17 (mainly bug fixes and clarifications).
-- 2023: C23 – modern improvements and continued maintenance.
+## C and Unix
 
-## Key features that made C important
-- Low-level memory access (pointers) with high-level language features.
-- Portability: compilers made it possible to run programs across different systems.
-- Small runtime and efficient compiled code, suitable for system programming.
-- A simple, orthogonal syntax that influenced many later languages (C++, Java, C#, Go, Rust).
+C was created while Bell Labs was developing the Unix operating system. Unix was initially written largely in assembly language. Rewriting much of Unix in C made it easier to maintain and port to different computer systems while retaining good performance.
 
-## Where is C used today?
-- Operating systems (kernel and system utilities) — parts of Windows, Linux, and macOS.
-- Embedded systems — microcontrollers and device firmware.
-- Databases and high-performance servers (MySQL, parts of other engines).
-- Language implementations and compilers — many languages and runtimes are written in C or use C interfaces.
-- Performance-critical applications and libraries.
+## Major milestones
 
-## Further reading
-- The C Programming Language — Brian W. Kernighan and Dennis M. Ritchie (K&R).
-- Official ISO C standard documents (look up C99, C11, C17, C23 for details).
+| Period | Milestone |
+| --- | --- |
+| 1969–1973 | C developed at Bell Labs and used in Unix work |
+| 1978 | Kernighan and Ritchie publish *The C Programming Language* |
+| 1989/1990 | ANSI C / C89/C90 standardized |
+| 1999 | C99 introduces significant language improvements |
+| 2011 | C11 adds features including improved concurrency support |
+| 2017 | C17 provides clarifications and fixes |
+| 2023 | C23 brings further modern language improvements |
 
-## Exercises
-1. Short answer: Why was portability a major advantage when Unix was rewritten in C?
-2. Research task: Find one open-source project (e.g., a small Unix utility) written in C and list the reasons the project benefits from using C.
-3. Quiz: Match the year to the standard (1989 → ?, 1999 → ?, 2011 → ?)
+## Why C became important
 
-## Key takeaways
-- Dennis Ritchie (with influence from Ken Thompson) created C at Bell Labs in the early 1970s.
-- C enabled Unix to become portable and easier to maintain.
-- Through standardization and incremental updates, C remains widely used for systems programming and embedded development.
+- It offered efficient compiled programs.
+- It provided pointers and low-level access without requiring assembly for every task.
+- It supported portability across different hardware platforms.
+- Its syntax influenced languages such as C++, Java, C#, Go, and Rust.
 
-[⬅️ Previous topic 1: Definition & Overview](./01-definition-and-overview.md) | 
+## C today
 
-[➡️ Next topic 3: Computer Language Levels](./03-language-levels.md)
+C remains common in operating systems, microcontroller firmware, databases, compilers, networking software, and high-performance libraries.
+
+## Practice
+
+1. Why was rewriting Unix in C useful?
+2. What is the relationship between B and C?
+3. Match these years to standards: 1999, 2011, 2017, 2023.
+
+## Key takeaway
+
+C grew from practical systems-programming needs and became influential because it combined portability, efficiency, and hardware control.
+
+---
+
+[⬅️ Previous topic: Definition & Overview](./01-definition-and-overview.md) | [➡️ Next topic: Computer Language Levels](./03-language-levels.md)

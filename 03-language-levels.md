@@ -1,76 +1,56 @@
-## Topic 3: Computer Languages
+# Topic 3: Computer Language Levels
 
-**Learning Objectives**
-- Understand why different programming language levels exist.
-- Distinguish between machine, assembly, and high-level languages.
-- Recognize where C fits in the language hierarchy.
-- Know the trade-offs between language levels.
+## Learning objectives
 
----
+- distinguish machine, assembly, and high-level languages
+- understand how source code is translated
+- explain where C fits in this comparison
+- compare readability, portability, and hardware control
 
-**Why do different types of languages exist?**
+## Why do language levels exist?
 
-A computer only understands one language: binary (0s and 1s). But writing programs directly in 0s and 1s is very hard for humans. So, over time, programmers created languages that are easier for people to understand and write.
+Processors execute machine instructions, represented internally as bits. Writing programs directly in machine code is difficult, so programmers use increasingly readable languages and translators.
 
-**Two main levels:**
+## Low-level languages
 
-> **1. Low-Level Languages:**
-These are close to the computer's hardware and far from human language.
-* **Machine Level Language:** Written purely in 0s and 1s. This is the only language the computer's processor directly understands.
+### Machine language
 
-  ✅Advantage: Runs very fast and uses the computer efficiently, since no translation is needed.
+Machine language consists of processor-specific instructions represented as binary or encoded bytes. It can be executed directly by the processor, but it is difficult to read, write, debug, and move between processor families.
 
-  ❌Disadvantage: Extremely hard for humans to read, write, or debug. Also, it's different for every type of processor, so code written for one computer won't work on another.
-* **Assembly Level Language:** Uses short human-readable codes (called mnemonics, like ADD, MOV, SUB) instead of pure binary.
+### Assembly language
 
-  ✅Advantage: Easier to write and understand than machine code.
+Assembly uses mnemonics such as `MOV`, `ADD`, and `SUB`. An **assembler** translates assembly into machine code. Assembly provides precise hardware control but remains processor-specific.
 
-  ❌Disadvantage: Still tied to a specific processor type, and still fairly hard to learn. Needs a translator called an assembler to convert it into machine code.
+## High-level languages
 
-> **2. High-Level Languages:**
-These are close to human language (English-like) and far from machine language. Examples: C, Python, Java.
-- ✅Advantage: Much easier to read, write, and fix. The same code can often run on different computers with little or no change (portability).
-- ❌Disadvantage: Needs a translator (a compiler or interpreter) to convert it into machine code, which can make it slightly slower than low-level code.
+High-level languages use abstractions and syntax that are easier for people to understand. Examples include C, Python, and Java. A compiler or interpreter translates the program into a form the computer can execute.
 
-**How the translation works:**
+Portability is not automatic: a program may still need platform-specific changes, libraries, or compiler settings.
 
-* Assembly code → converted by an assembler → machine code
-* High-level code → converted by a compiler (all at once) or an interpreter (line by line) → machine code
+## Where does C fit?
 
-**Where does C fit in?**
+C is generally considered a high-level language with low-level capabilities. It provides functions, control structures, and readable syntax while also supporting pointers, manual memory management, and bitwise operations.
 
-C is called a **middle-level language**. This means:
-- It has the readability and structure of a high-level language (easy to write, uses English-like keywords like `if`, `while`, `return`).
-- But it also gives you low-level access to memory and hardware (through pointers), which is normally only possible in low-level languages.
+Calling C a **middle-level language** is an informal teaching term, not an official classification.
 
-This combination is exactly why C became so important: it's easy enough for humans to write real programs, but powerful enough to build operating systems and control hardware directly.
+| Feature | Machine | Assembly | C |
+| --- | --- | --- | --- |
+| Readability | Very low | Low | Moderate to high |
+| Hardware dependence | Very high | Very high | Lower, but platform code exists |
+| Translator | None | Assembler | Compiler |
+| Hardware control | Direct | Direct | Strong, through language features |
+| Portability | Very low | Very low | Usually higher |
 
-**Quick comparison:**
+## Practice
 
-| Feature | Machine Language | Assembly Language | High-Level Language (C) |
-| :--- | :--- | :--- | :--- |
-| **Syntax** | Binary (`0`s and `1`s) | Mnemonics (`MOV`, `ADD`) | English-like statements |
-| **Hardware Dependence** | Fully Dependent | Fully Dependent | Independent (Portable) |
-| **Execution Speed** | Fastest | Fast | Moderate / Slower |
-| **Translator Needed?** | None | Assembler | Compiler or Interpreter |
-| **Memory Control** | Direct | Direct | Managed / Abbreviated |
-| **Ease of Learning** | Extremely Hard | Hard | Easy to Moderate |
+1. Why is assembly more portable than machine code only in a limited sense?
+2. Name two C features that provide low-level control.
+3. Why does C still require a compiler even though it is close to hardware?
+
+## Key takeaway
+
+C bridges readable programming structure and low-level control, which makes it useful for software that must be both efficient and close to the hardware.
 
 ---
 
-## Exercises
-1. Why is C called a "middle-level language"?
-2. Give an example of a task best suited for assembly language vs. C.
-3. In the comparison table, which language would you choose to control an embedded device? Why?
-
-## Key takeaways
-- Machine language is the only language computers truly understand, but humans need easier options.
-- Assembly is a step up, but still hardware-dependent and complex.
-- High-level languages prioritize human readability and portability.
-- C bridges the gap, offering high-level convenience with low-level control.
-
----
-
-[⬅️ Previous topic 2: History & Creator](./02-history-and-creator.md) |
-
-[➡️ Next topic 4: Advantages & Disadvantages](./04-advantages-disadvantages.md)
+[⬅️ Previous topic: History & Creator](./02-history-and-creator.md) | [➡️ Next topic: Advantages & Disadvantages](./04-advantages-disadvantages.md)

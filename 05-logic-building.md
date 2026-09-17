@@ -1,84 +1,78 @@
-## Topic_5 Logic building: Algorithm, Pseudo code, Flowchart.
+# Topic 5: Logic Building — Algorithms, Pseudocode & Flowcharts
 
-Before writing real C code, it is important to plan how a program should solve a problem. This planning stage uses three tools: Algorithm, Pseudocode, and Flowchart.
+Before writing C code, plan how the program should solve the problem. Three useful planning tools are algorithms, pseudocode, and flowcharts.
 
-**Algorithm:**
+## Algorithm
 
-An algorithm is a step-by-step method to solve a problem. It is a clear set of instructions that, when followed in order, always ends with a result.
+An algorithm is a finite, clear sequence of steps that transforms input into an output.
 
-*Properties every algorithm must have:*
-* Finiteness – It must end after a fixed number of steps (it cannot run forever).
-* Definiteness – Every step must be clear and mean exactly one thing.
-* Input – It can take zero or more inputs.
-* Output – It must produce at least one output.
-* Effectiveness – Every step must be simple enough to actually be carried out.
+A good algorithm has:
 
-*Example:* Algorithm to find the average of three numbers.
+- **Finiteness:** It eventually ends.
+- **Definiteness:** Each step is precise.
+- **Input:** It accepts zero or more inputs.
+- **Output:** It produces a result.
+- **Effectiveness:** Each step can actually be performed.
 
-> * Start
-> * Read three numbers and store them in a, b, c
-> * Compute avg = (a + b + c) / 3.0
-> * Display the average
-> * End
+### Example: average of three numbers
 
-**Pseudocode:**
+1. Start.
+2. Read `a`, `b`, and `c`.
+3. Calculate `average = (a + b + c) / 3.0`.
+4. Display the average.
+5. End.
 
-Pseudocode is a way of writing the logic of a program using plain, everyday English instead of real programming syntax. It helps a programmer plan the logic before worrying about the exact rules of a programming language.
+## Pseudocode
 
-*Example:* Pseudocode to check pass/fail based on average marks.
+Pseudocode expresses logic in plain language without requiring exact C syntax. It lets you focus on the solution before thinking about semicolons, types, and library functions.
 
-> * Input 4 marks
-> * Calculate their average by summing and dividing by 4
-> * If average is below 50
-> * print "Fail"
-> * else
-> * print "Pass"
+```text
+START
+    INPUT four marks
+    average = sum of marks / 4
+    IF average >= 50 THEN
+        OUTPUT "Pass"
+    ELSE
+        OUTPUT "Fail"
+    END IF
+END
+```
 
-**Flowchart:**
+## Flowcharts
 
-A flowchart is a picture or diagram that shows an algorithm's steps and their order using standard shapes connected by arrows.
+A flowchart represents an algorithm visually. Common symbols include:
 
-*Why flowcharts are useful:*
+| Symbol | Purpose |
+| --- | --- |
+| Oval | Start or end |
+| Parallelogram | Input or output |
+| Rectangle | Processing or calculation |
+| Diamond | Decision |
+| Arrow | Direction of flow |
 
-* They make it easier to understand a program's logic at a glance.
-* Different shapes represent different kinds of actions, so the flow of the program is easy to follow visually.
-
-*Standard flowchart symbols:*
-
-| Symbol Name | Actual Visual Shape | Purpose / Description |
-| :--- | :---: | :--- |
-| **Flow Lines** | ➡️ ⬇️ | Connect symbols and show the direction of flow. |
-| **Terminal Symbol** | 🛑 *(Oval)* | Indicates the **Start** or **End** of a flowchart. |
-| **Input / Output** | ▰ *(Parallelogram)* | Used for reading inputs (`Read`) or printing outputs (`Print`). |
-| **Process Symbol** | ▭ *(Rectangle)* | Used for calculations and operations (e.g., `a = b + c`). |
-| **Decision Symbol** | 🔷 *(Diamond)* | Represents a true/false or yes/no question. |
-| **Connectors** | ⚪ *(Circle)* | Connects different parts of a long flowchart together. |
-
-### Example Flowchart: Check Pass or Fail
-
-This flowchart checks whether a student's average marks are enough to pass.
+### Example: check pass or fail
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[/Input 4 marks/]
+    A([Start]) --> B[/Input four marks/]
     B --> C[Calculate average]
-    C --> D{Is average >= 50?}
-    D -- Yes --> E[/Display "Pass"/]
-    D -- No --> F[/Display "Fail"/]
+    C --> D{Average >= 50?}
+    D -- Yes --> E[/Display Pass/]
+    D -- No --> F[/Display Fail/]
     E --> G([End])
     F --> G
 ```
 
-In this flowchart:
+## Practice
 
-- `Start` and `End` use terminal symbols.
-- `Input 4 marks` uses a parallelogram because it is an input operation.
-- `Calculate average` uses a rectangle because it is a processing step.
-- `Is average >= 50?` uses a diamond because it is a decision.
-- `Display "Pass"` and `Display "Fail"` use parallelograms because they are output operations.
+1. Write an algorithm to find the larger of two numbers.
+2. Convert that algorithm into pseudocode.
+3. Draw a flowchart for checking whether a number is even or odd.
 
-----
+## Key takeaway
 
-[⬅️ Previous Topic:04-advantages-disadvantages.md](./04-advantages-disadvantages.md) |
+Planning separates problem-solving from language syntax. A clear algorithm makes the final C program easier to write, test, and debug.
 
- [➡️ Next Topic:06-compiler-setup.md](./06-compiler-setup.md)
+---
+
+[⬅️ Previous topic: Advantages & Disadvantages](./04-advantages-disadvantages.md) | [➡️ Next topic: Compiler Setup](./06-compiler-setup.md)
