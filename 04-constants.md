@@ -1,99 +1,197 @@
-## 04: Constants
+# 🔢 04 · Constants in C
 
-**What is a Constant?**
-A constant is a **value that does not change** during the execution of a program. Unlike a variable, once a constant's value is set, it stays fixed throughout the program.
+<div align="center">
+
+[![C Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Level](https://img.shields.io/badge/Level-Beginner-2ea44f?style=for-the-badge)](#)
+[![Topic](https://img.shields.io/badge/Topic-Constants-8A2BE2?style=for-the-badge)](#)
+
+**A constant is a value that does not change while a program runs.** 🔒
+
+</div>
+
+> 💡 **In one line:** `25`, `3.14`, `'A'`, and `"Hello"` are all literal values written directly in a C program.
+
+---
+
+## 🧠 What is a constant?
+
+A **constant** is a fixed value. Unlike a variable, its value is not intended to change during program execution.
 
 ```c
 int age = 25;
 ```
-Here, `25` is a constant — a fixed value that doesn't change while the program runs.
+
+Here, `25` is an **integer constant**. It is a fixed value used to initialize `age`.
+
+> ⚠️ **Important:** A literal such as `25` is not the same thing as a named constant declared with `const`. For example, `const int days = 7;` declares a variable that cannot be modified through `days` after initialization.
 
 ---
 
-### Types of Constants in C
+## 🗺️ Types of constants in C
 
-Constants in C are divided into two main categories: **Numeric Constants** and **Character Constants**.
-
-```
+```text
 Constants
-├── Numeric Constants
-│   ├── Integer Constants
-│   │   ├── Decimal
-│   │   ├── Octal
-│   │   └── Hexadecimal
-│   └── Real (Floating-Point) Constants
-└── Character Constants
-    ├── Single Character
-    └── String
+├── Integer constants
+│   ├── Decimal
+│   ├── Octal
+│   └── Hexadecimal
+├── Floating-point constants
+├── Character constants
+└── String literals
 ```
 
 ---
 
-## 1. Numeric Constants
+## 1️⃣ Integer constants
 
-These represent numbers — either whole numbers or numbers with decimal points.
+An integer constant represents a whole number. It has no decimal point and may be positive, negative, or zero.
 
-### A) Integer Constants
-An integer constant is a whole number with **no decimal point**. It can be positive, negative, or zero. Integer constants come in three forms, based on the number system used:
+### 🔟 Decimal integers
 
-**i) Decimal Integer Constants**
-- Written in the normal base-10 number system (digits 0-9).
-- Example: `25`, `-100`, `0`, `2024`
+- Use the normal base-10 system: digits `0`–`9`.
+- Examples: `25`, `-100`, `0`, `2024`
 
-**ii) Octal Integer Constants**
-- Written in base-8, using digits **0 to 7** only.
-- Must begin with a **leading 0**.
-- Example: `010` (equals decimal 8), `017` (equals decimal 15)
+### 🐙 Octal integers
 
-**iii) Hexadecimal Integer Constants**
-- Written in base-16, using digits **0-9** and letters **A-F** (or a-f).
-- Must begin with **0x** or **0X**.
-- Example: `0x1A` (equals decimal 26), `0X2F` (equals decimal 47)
+- Use base 8: digits `0`–`7` only.
+- Begin with a leading `0`.
+- Examples: `010` equals decimal `8`; `017` equals decimal `15`.
 
-### B) Real (Floating-Point) Constants
-A real constant is a number that **includes a decimal point** or is written in exponential (scientific) form — used to represent fractional values.
-- Decimal form: `3.14`, `0.001`, `-25.5`
-- Exponential form: `2.5e3` (means 2.5 × 10³ = 2500), `1.2E-4` (means 1.2 × 10⁻⁴)
+```c
+int permission = 0644; // Octal notation
+```
 
----
+> 🚫 `018` is invalid octal notation because the digit `8` is not allowed.
 
-## 2. Character Constants
+### 🧮 Hexadecimal integers
 
-These represent text — either a single character or a sequence of characters.
+- Use base 16: digits `0`–`9` and letters `A`–`F` (uppercase or lowercase).
+- Begin with `0x` or `0X`.
+- Examples: `0x1A` equals decimal `26`; `0X2F` equals decimal `47`.
 
-### A) Single Character Constant
-- A **single character** enclosed in **single quotes** `' '`.
-- Example: `'A'`, `'5'`, `'$'`, `'\n'` (newline is also a valid single character constant, called an escape sequence)
-
-### B) String Constant
-- A **sequence of characters** enclosed in **double quotes** `" "`.
-- Example: `"Hello"`, `"C Programming"`, `"123"`
-- Internally, C automatically adds a hidden `\0` (null character) at the end of every string to mark where it ends.
+```c
+int color = 0xFF; // Hexadecimal notation
+```
 
 ---
 
-### Rules for Constants
+## 2️⃣ Floating-point constants
 
-1. A single character constant must use **single quotes**, and a string constant must use **double quotes** — they are not interchangeable.
-2. Integer constants **cannot contain a decimal point or spaces**.
-3. Octal constants must start with `0`, and their digits must only be **0-7**.
-4. Hexadecimal constants must start with `0x` or `0X`, and can use digits **0-9** and letters **A-F/a-f**.
-5. Real constants must have **at least one digit before and after the decimal point** (e.g., `0.5`, not `.5`).
-6. A string constant is technically stored as an **array of characters**, ending with a null character (`\0`), even though this isn't visible when you write it.
+A floating-point constant represents a fractional value. It may use decimal notation or exponential notation.
 
----
-
-### Quick Reference Table
-
-| Type | Example | Notes |
+| Form | Examples | Meaning |
 |---|---|---|
-| Decimal Integer | `100` | Normal base-10 number |
-| Octal Integer | `0144` | Starts with 0, digits 0-7 |
-| Hexadecimal Integer | `0x64` | Starts with 0x, digits 0-9/A-F |
-| Real Constant | `3.14` | Contains a decimal point |
-| Single Character | `'A'` | Enclosed in single quotes |
-| String | `"Hello"` | Enclosed in double quotes |
+| Decimal | `3.14`, `0.001`, `-25.5` | A value with a fractional part |
+| Exponential | `2.5e3`, `1.2E-4` | `2.5 × 10³` and `1.2 × 10⁻⁴` |
+
+C also permits forms such as `.5` and `5.`. The decimal point is not required when an exponent is present: `1e3` is valid too.
+
+```c
+double distance = 12.5;
+double large_number = 1.2e4; // 12000
+```
 
 ---
 
-⬅️ [Previous: 03. Keywords](#) | [Next: 05. Strings](#) ➡️
+## 3️⃣ Character constants and string literals
+
+### 🔤 Character constants
+
+A character constant contains **one character** enclosed in single quotes.
+
+```c
+char grade = 'A';
+char digit = '5';
+char newline = '\n';
+```
+
+Escape sequences such as `\n` (newline) and `\t` (tab) represent special characters.
+
+### 💬 String literals
+
+A string literal is a sequence of characters enclosed in double quotes.
+
+```c
+"Hello"
+"C Programming"
+"123"
+```
+
+C stores a string as an array of characters ending with a hidden null character, `\0`.
+
+```c
+char message[] = "Hi";
+// Stored as: 'H'  'i'  '\0'
+```
+
+> ✅ **Remember:** `'A'` is one character, while `"A"` is a string containing one character plus the terminating `\0`.
+
+---
+
+## 📏 Rules to remember
+
+1. Use **single quotes** for a character constant and **double quotes** for a string literal.
+2. Integer constants do not contain a decimal point or spaces.
+3. Octal constants begin with `0` and may contain only digits `0`–`7`.
+4. Hexadecimal constants begin with `0x` or `0X` and may contain `0`–`9`, `A`–`F`, or `a`–`f`.
+5. Floating-point constants may use decimal or exponential notation, such as `.5`, `5.`, `3.14`, or `1e3`.
+6. A string literal ends with the null character `\0` when stored in a character array.
+
+---
+
+## 🧪 Quick practice
+
+What is the type of each value?
+
+```c
+42       // Integer constant
+010      // Octal integer constant
+0x2A     // Hexadecimal integer constant
+3.14     // Floating-point constant
+'A'      // Character constant
+"Hello"  // String literal
+```
+
+<details>
+<summary>✨ Click to see a simple challenge</summary>
+
+Which value represents the number `10` in octal notation?
+
+**Answer:** `012` ✅
+
+</details>
+
+---
+
+## 📚 Quick reference
+
+| Type | Example | Key idea |
+|---|---|---|
+| Decimal integer | `100` | Base 10 |
+| Octal integer | `0144` | Starts with `0`; digits `0`–`7` |
+| Hexadecimal integer | `0x64` | Starts with `0x`; digits `0`–`9`, `A`–`F` |
+| Floating-point | `3.14` | Represents a fractional value |
+| Character constant | `'A'` | One character in single quotes |
+| String literal | `"Hello"` | Text in double quotes; ends with `\0` in storage |
+
+---
+
+<div align="center">
+
+### 🎉 You can now identify the most common values used in C!
+
+</div>
+
+<table width="100%">
+<tr>
+<td align="left">⬅️ <a href="03-keywords.md">03 · Keywords</a></td>
+<td align="right"><a href="05-strings.md">05 · Strings</a> ➡️</td>
+</tr>
+</table>
+
+<div align="center">
+
+[⬆️ Back to top](#-04--constants-in-c)
+
+</div>
