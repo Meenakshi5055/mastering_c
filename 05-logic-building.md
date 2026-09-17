@@ -55,6 +55,18 @@ A flowchart is a picture (diagram) that shows an algorithm's steps and their ord
 | **Decision Symbol** | 🔷 *(Diamond)* | Represents a true/false or yes/no question. |
 | **Connectors** | ⚪ *(Circle)* | Connects different parts of a long flowchart together. |
 ----
+> **Example flowchart**
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Input 4 marks/]
+    B --> C[Calculate average]
+    C --> D{Is average >= 50?}
+    D -- Yes --> E[/Display "Pass"/]
+    D -- No --> F[/Display "Fail"/]
+    E --> G([End])
+    F --> G
+```
+----
 
 [⬅️ Previous Topic:04-advantages-disadvantages.md](./04-advantages-disadvantages.md) |
 
