@@ -5,44 +5,37 @@
 [![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![Level](https://img.shields.io/badge/Level-Beginner-2ea44f?style=for-the-badge)](#)
 [![Topic](https://img.shields.io/badge/Topic-Constants-8A2BE2?style=for-the-badge)](#)
-[![Practice](https://img.shields.io/badge/Practice-Examples%20%2B%20Quiz-ff69b4?style=for-the-badge)](#-quick-practice)
 
-### 🔒 A constant is a fixed value that does not change during program execution.
+### 🔒 A constant is a fixed value used by a C program.
 
 </div>
 
-> 💡 **Simple idea:** `25`, `3.14`, `'A'`, and `"Hello"` are values written directly in a C program.
+> 💡 **Remember:** `25`, `3.14`, `'A'`, `"A"`, and `"Hello\nWorld"` are different kinds of constants or literals.
 
 ---
 
 ## 🧠 What is a constant?
 
-A **constant** is a value that remains fixed while a program is running. For example, `25` is an integer constant:
+A constant is a value written directly in a program. Its value does not change during evaluation.
 
 ```c
-int age = 25;
+int age = 25;       // age is a variable; 25 is an integer constant
+const int days = 7; // days is a read-only object after initialization
 ```
 
-Here, `age` is a variable and `25` is a constant value.
-
-> 📌 **Do not confuse these terms:** `25` is a literal constant. `const int days = 7;` is a declaration that prevents the program from modifying `days` through that name.
-
----
-
-## 🗺️ Classification of constants in C
-
-C constants are divided into **two main categories**:
+## 🗺️ Classification
 
 ```text
 Constants
-├── 1. Numeric Constants
+���── 1. Numeric Constants
 │   ├── A. Integer Constants
-│   │   ├── i. Decimal Integer Constants
-│   │   ├── ii. Octal Integer Constants
-│   │   └── iii. Hexadecimal Integer Constants
+│   │   ├── i. Decimal
+│   │   ├── ii. Octal
+│   │   └── iii. Hexadecimal
 │   └── B. Real (Floating-point) Constants
 └── 2. Character Constants
     ├── A. Single Character Constants
+    │   └── Escape Sequences
     └── B. String Constants
 ```
 
@@ -50,288 +43,278 @@ Constants
 
 # 1️⃣ Numeric Constants 🔢
 
-Numeric constants represent numbers. They are divided into **integer constants** and **real (floating-point) constants**.
-
 ## A) Integer Constants
 
-An integer constant is a whole number without a fractional part. It may be positive, negative, or zero.
+Whole numbers without a fractional part.
 
-### i) Decimal Integer Constants 🔟
-
-- Written in the base-10 number system.
-- Use the digits `0` to `9`.
-- Do not use a prefix.
-- Examples: `25`, `-100`, `0`, `2024`.
+- **Decimal:** `25`, `-100`, `0`
+- **Octal:** `010` is decimal `8`; begins with `0` and uses only `0`–`7`.
+- **Hexadecimal:** `0x1A` is decimal `26`; begins with `0x` or `0X` and uses `0`–`9`, `A`–`F`, or `a`–`f`.
 
 ```c
 #include <stdio.h>
 
 int main(void) {
-    int decimal_number = 25;
-    printf("Decimal value: %d\\n", decimal_number);
+    int decimal = 25;
+    int octal = 010;       // decimal 8
+    int hexadecimal = 0x1A; // decimal 26
+
+    printf("%d %o %X\n", decimal, octal, hexadecimal);
     return 0;
 }
 ```
 
-**Output:**
+> 🚫 `018` is invalid octal notation because `8` is not an octal digit.
 
-```text
-Decimal value: 25
-```
+### Integer `printf()` specifiers
 
-### ii) Octal Integer Constants 🐙
-
-- Written in the base-8 number system.
-- Use only the digits `0` to `7`.
-- Must begin with a leading `0`.
-- Examples: `010` (decimal `8`), `017` (decimal `15`), `0644` (decimal `420`).
-
-```c
-#include <stdio.h>
-
-int main(void) {
-    int octal_number = 010;
-    printf("Octal value: %o\\n", octal_number);
-    printf("Decimal value: %d\\n", octal_number);
-    return 0;
-}
-```
-
-**Output:**
-
-```text
-Octal value: 10
-Decimal value: 8
-```
-
-> 🚫 `018` is invalid as an octal integer constant because octal numbers cannot contain `8` or `9`.
-
-### iii) Hexadecimal Integer Constants 🧮
-
-- Written in the base-16 number system.
-- Use digits `0` to `9` and letters `A` to `F` or `a` to `f`.
-- Must begin with `0x` or `0X`.
-- Examples: `0x1A` (decimal `26`) and `0X2F` (decimal `47`).
-
-```c
-#include <stdio.h>
-
-int main(void) {
-    int hexadecimal_number = 0x1A;
-    printf("Hexadecimal value: %X\\n", hexadecimal_number);
-    printf("Decimal value: %d\\n", hexadecimal_number);
-    return 0;
-}
-```
-
-**Output:**
-
-```text
-Hexadecimal value: 1A
-Decimal value: 26
-```
-
-### 🖨️ Format specifiers for integer values
-
-A constant does not have a format specifier by itself. **Format specifiers are used with functions such as `printf()` to display a value.**
-
-| Integer value | `printf()` specifier | Example |
-|---|---|---|
-| Decimal `int` | `%d` or `%i` | `printf("%d", number);` |
-| Octal `int` | `%o` | `printf("%o", number);` |
-| Hexadecimal lowercase | `%x` | `printf("%x", number);` |
-| Hexadecimal uppercase | `%X` | `printf("%X", number);` |
-| Unsigned decimal | `%u` | `printf("%u", number);` |
-| `long int` | `%ld` | `printf("%ld", number);` |
-| `long long int` | `%lld` | `printf("%lld", number);` |
-
-> ✅ `%i` and `%d` both display a decimal `int` with `printf()`. In `scanf()`, `%i` can detect the base from a prefix, while `%d` reads decimal input.
+| Representation/type | Specifier |
+|---|---|
+| Decimal `int` | `%d` or `%i` |
+| Octal `int` | `%o` |
+| Hexadecimal `int` | `%x` or `%X` |
+| Unsigned `int` | `%u` |
+| `long int` | `%ld` |
+| `long long int` | `%lld` |
 
 ## B) Real (Floating-point) Constants 🌊
 
-A real constant represents a number with a fractional part or a number written in exponential notation.
-
-- Decimal examples: `3.14`, `0.001`, `-25.5`, `.5`, and `5.`
-- Exponential examples: `2.5e3` means `2500`; `1.2E-4` means `0.00012`; `1e3` means `1000`.
-
-By default, a floating-point constant has type `double`. Add `f` or `F` for `float`, or `L` for `long double`.
+Examples: `3.14`, `.5`, `5.`, `2.5e3`, and `1.2E-4`. A floating-point literal is `double` by default; `2.5f` is `float` and `2.5L` is `long double`.
 
 ```c
 #include <stdio.h>
 
 int main(void) {
-    double price = 3.14;
-    float ratio = 2.5f;
-    long double precise_value = 1.2L;
-
-    printf("Price: %.2f\\n", price);
-    printf("Ratio: %.1f\\n", ratio);
-    printf("Precise value: %Lf\\n", precise_value);
+    double value = 3.14;
+    printf("%.2f\n", value);
     return 0;
 }
 ```
 
-| Type | `printf()` specifier | Example |
-|---|---|---|
-| `float` or `double` | `%f` | `printf("%f", value);` |
-| Scientific notation | `%e` or `%E` | `printf("%e", value);` |
-| Shortest suitable form | `%g` or `%G` | `printf("%g", value);` |
-| `long double` | `%Lf` | `printf("%Lf", value);` |
-
-> 🎯 `%.2f` displays two digits after the decimal point.
+Use `%f`, `%e`/`%E`, `%g`/`%G`, or `%Lf` with `printf()` as appropriate.
 
 ---
 
 # 2️⃣ Character Constants 🔤
 
-Character constants represent characters or text. They are divided into **single character constants** and **string constants**.
-
 ## A) Single Character Constants
 
-- Contain one character.
-- Are enclosed in **single quotes**.
-- Examples: `'A'`, `'5'`, and `'$'`.
-- Escape sequences such as `'\\n'` and `'\\t'` also represent one character.
+A valid single character constant contains **exactly one character** or **one escape sequence** between single quotes.
 
-> ⚠️ **Important:** The backslash (`\\`) introduces an **escape sequence**. Escape sequences are written inside character constants or string literals to represent control characters and characters that are difficult to type directly.
+### ✅ Valid single character constants
 
-### 🧩 Escape sequences you should remember
+```c
+'A'       // one ordinary character
+'5'       // character 5, not integer 5
+' '       // one space
+'\n'      // one newline character
+'\t'      // one tab character
+'\''      // one single-quote character
+'\\'      // one backslash character
+'\x41'    // character code for A
+'\101'    // octal character code for A
+```
 
-| Escape sequence | Name | Meaning |
+### ❌ Invalid single character constants
+
+```c
+'AB'      // more than one character
+''        // empty character constant
+'A        // missing closing quote
+"A"       // valid string literal, not a character constant
+'\'       // invalid: the backslash escapes the closing quote
+'\q'      // not a standard C escape sequence
+```
+
+> ⚠️ Some implementations accept multi-character constants such as `'AB'` as an extension, but they are not a normal one-character constant and their value is implementation-defined. Do not use them for beginner C programs.
+
+### 🧩 Escape sequences
+
+The backslash introduces an escape sequence. It may represent a control character or a character that is difficult to type directly.
+
+| Sequence | Name | Meaning |
 |---|---|---|
-| `\\a` | Alert / bell | Produces an alert sound if supported |
-| `\\b` | Backspace | Moves the cursor one position backward |
-| `\\f` | Form feed / page feed | Advances to the next page on supported devices |
-| `\\n` | Newline | Moves the cursor to the beginning of the next line |
-| `\\r` | Carriage return | Moves the cursor to the beginning of the current line |
-| `\\t` | Horizontal tab | Moves the cursor to the next horizontal tab stop |
-| `\\v` | Vertical tab | Moves the cursor to the next vertical tab stop |
-| `\\\\` | Backslash | Represents one literal backslash (`\\`) |
-| `\\'` | Single quote | Represents a single quote (`'`) |
-| `\\\"` | Double quote | Represents a double quote (`\"`) |
-| `\\?` | Question mark | Represents a question mark (`?`) |
-| `\\0` | Null character | Marks the end of a C string; value is zero |
-| `\\ooo` | Octal character code | Character represented by one to three octal digits |
-| `\\xhh` | Hexadecimal character code | Character represented by hexadecimal digits |
+| `\a` | Alert/bell | Audible or visual alert if supported |
+| `\b` | Backspace | Moves back one position |
+| `\f` | Form feed/page feed | Advances to the next page on supported devices |
+| `\n` | Newline | Moves to the next line |
+| `\r` | Carriage return | Moves to the beginning of the current line |
+| `\t` | Horizontal tab | Moves to the next tab stop |
+| `\v` | Vertical tab | Moves to the next vertical tab stop |
+| `\\` | Backslash | A literal backslash |
+| `\'` | Single quote | A literal single quote |
+| `\"` | Double quote | A literal double quote |
+| `\?` | Question mark | A literal question mark |
+| `\0` | Null character | Character value zero; commonly terminates strings |
+| `\ooo` | Octal escape | One to three octal digits |
+| `\xhh` | Hex escape | One or more hexadecimal digits |
 
-> 📝 **Terminology note:** `\\f` is called **form feed**. Some books also call it **page feed**. `\\r` is carriage return, `\\n` is newline, and `\\b` is backspace—they are different escape sequences.
-
-### ✅ Escape-sequence example program
+Use `%c` to print a single character:
 
 ```c
 #include <stdio.h>
 
 int main(void) {
-    printf("1. Newline\\n2. Horizontal tab\\tDone\\n");
-    printf("3. Carriage return: ABC\\rXYZ\\n");
-    printf("4. Backslash: \\\\\\n");
-    printf("5. Single quote: \\\'\\n");
-    printf("6. Double quote: \\\"\\n");
-    printf("7. Question mark: \\?\\n");
-    printf("8. Alert: \\a\\n");
-    return 0;
-}
-```
-
-> 💡 `\\n` and `\\t` are the most frequently used in beginner programs. The visible effect of `\\a`, `\\b`, `\\f`, `\\r`, and `\\v` depends on the terminal or output device.
-
-```c
-#include <stdio.h>
-
-int main(void) {
-    char newline = '\\n';
-    char tab = '\\t';
+    char letter = 'A';
+    char newline = '\n';
     char quote = '\'';
-    char backslash = '\\\\';
+    char slash = '\\';
 
-    printf("Line one%c%sLine two%cDone%c", newline, "", newline, tab);
-    printf("%c%c%c%c\\n", quote, tab, backslash, quote);
+    printf("Letter: %c%c", letter, newline);
+    printf("Quote: %c%c", quote, newline);
+    printf("Backslash: %c%c", slash, newline);
     return 0;
 }
 ```
 
-**Format specifier:** Use `%c` with `printf()` to display a single character.
+> 📝 `\n` is one character in a character constant, even though its source spelling uses two characters: backslash and `n`.
 
-> ⚠️ `'5'` is a character constant, not the integer constant `5`. The first is displayed with `%c`; the second is displayed with `%d`.
+## B) String Constants (String Literals) 💬
 
-## B) String Constants 💬
+A string constant is a sequence of characters enclosed in double quotes. It may contain zero, one, or many characters.
 
-A string constant, commonly called a **string literal**, is a sequence of characters enclosed in **double quotes**.
+```c
+""              // empty string: zero visible characters
+"A"             // one visible character
+"      "        // six space characters
+"Hello"         // five visible characters
+"Hello\nWorld"  // text containing a newline character
+```
 
-Examples: `"Hello"`, `"C Programming"`, and `"123"`.
+### 🔲 Empty/null string versus null character
 
-C automatically stores a null character, `\\0`, at the end of a string in a character array.
+These terms must not be confused:
+
+| Term | Example | Meaning |
+|---|---|---|
+| Empty string | `""` | Zero visible characters, stored as one element: `\0` |
+| Null character | `\0` or `'\0'` | One character whose value is zero |
+| Null pointer | `NULL` | A pointer value that points to no object; not a string |
+| Text zero | `'0'` or `"0"` | The digit character zero; not the null character |
+
+```c
+char empty[] = "";       // array contains only '\0'; sizeof empty is 1
+char one[] = "A";        // 'A', '\0'; sizeof one is 2
+char spaces[] = "      "; // six spaces, then '\0'; sizeof spaces is 7
+char line[] = "A\nB";    // 'A', newline, 'B', '\0'; sizeof line is 4
+```
+
+The terminating `\0` is added automatically when a string literal initializes a character array. It is **not displayed** and is not counted as visible text.
+
+### One character in a string versus a character constant
+
+```c
+char character = 'A';  // one character; use %c
+char text[] = "A";     // string: 'A' followed by '\0'; use %s
+```
+
+`'A'` and `"A"` are not interchangeable. Similarly, `"\n"` is a one-character string plus its terminating `\0`, while `'\n'` is one newline character.
+
+### Newline inside a string
 
 ```c
 #include <stdio.h>
 
 int main(void) {
-    char message[] = "Hello\\nWorld";
-    printf("%s", message);
+    printf("First line\nSecond line\n");
+    printf("The string above contains a newline escape sequence.\n");
     return 0;
 }
 ```
 
-The array contains the characters of the text, followed by `\\0`:
+A string cannot contain an unescaped physical line break between its quotes. Use `\n` instead:
 
-```text
-'H'  'e'  'l'  'l'  'o'  '\\n'  'W'  'o'  'r'  'l'  'd'  '\\0'
+```c
+const char *valid = "First line\nSecond line";
+/* const char *invalid = "First line
+   Second line"; */
 ```
 
-**Format specifier:** Use `%s` with `printf()` to display a string.
+### Six white spaces
 
-> ✅ `'A'` is one character. `"A"` is a string containing `'A'` followed by `\\0` in storage.
+Whitespace is still data inside a string. The following string contains exactly six space characters:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char six_spaces[] = "      ";
+
+    printf("[%s]\n", six_spaces);          // spaces are visible between brackets
+    printf("Length: %zu\n", strlen(six_spaces)); // 6
+    printf("Storage: %zu\n", sizeof six_spaces); // 7, including '\0'
+    return 0;
+}
+```
+
+Use `%s` to print a string. `strlen()` counts characters before `\0`; `sizeof` includes the terminating `\0` when used on the array itself.
+
+### Null character inside a string
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char text[] = "A\0B";
+
+    printf("%s\n", text);          // prints only A
+    printf("Length: %zu\n", strlen(text)); // 1
+    printf("Array size: %zu\n", sizeof text); // 4: A, \0, B, \0
+    return 0;
+}
+```
+
+A `\0` inside a string stops functions such as `%s` and `strlen()` at that point, although later array elements may still exist.
 
 ---
 
-## 📏 Complete rules for constants and escape sequences
+## 📏 Rules to remember
 
-1. C constants are classified into numeric constants and character constants.
-2. Numeric constants contain integer and real (floating-point) constants.
-3. Integer constants may be decimal, octal, or hexadecimal.
-4. Decimal integer constants use digits `0`–`9` and have no prefix.
-5. Octal integer constants begin with `0` and use only digits `0`–`7`.
-6. Hexadecimal integer constants begin with `0x` or `0X` and use digits `0`–`9` and letters `A`–`F` or `a`–`f`.
-7. An integer constant cannot contain a decimal point, exponent, or spaces.
-8. An integer constant can have suffixes such as `U`, `L`, or `LL`, for example `25U` or `100L`.
-9. A real constant can use decimal notation or exponential notation.
-10. A floating-point constant is `double` by default. Use `f`/`F` for `float` and `l`/`L` for `long double`.
-11. A single character constant is enclosed in single quotes, such as `'A'`.
-12. A string constant is enclosed in double quotes, such as `"Hello"`.
-13. A character constant represents one character; a string constant represents a sequence of characters.
-14. A string stored in a character array ends with the null character `\\0`.
-15. An escape sequence begins with a backslash, such as `\\n`, `\\t`, or `\\\\`.
-16. Use `\\'` for a single quote, `\\\"` for a double quote, `\\?` for a question mark, and `\\\\` for a literal backslash.
-17. Use `\\a`, `\\b`, `\\f`, `\\n`, `\\r`, `\\t`, and `\\v` for standard control characters.
-18. Escape sequences may appear inside character constants and string literals.
-19. `\\0` is the null character used to terminate strings; it is not the same as the character `'0'`.
-20. Format specifiers belong to functions such as `printf()` and are not part of the constant itself.
+1. Single character constants use single quotes; string constants use double quotes.
+2. A single character constant must contain one character or one escape sequence.
+3. `''`, `'AB'`, and an unclosed quote are invalid ordinary character constants.
+4. `'A'` is a character; `"A"` is a string containing `A` and `\0`.
+5. A space is a character, so `' '` is valid.
+6. A string may contain zero characters: `""` is valid and has only its terminating `\0` in an array.
+7. Six spaces in `"      "` are six data characters plus one terminating `\0`.
+8. Escape sequences begin with a backslash and can occur in character constants and strings.
+9. `\n` is a newline character; it is not the same as the two ordinary characters `\\` and `n`.
+10. Use `\n` for a newline inside a string; do not place an unescaped physical line break inside a string literal.
+11. `\0` is the null character, not the digit character `'0'`.
+12. A string initialized into an array receives an automatic terminating `\0`.
+13. A string literal can contain an escaped quote, backslash, tab, newline, or other escape sequence.
+14. `%c` prints one character; `%s` prints characters up to the first `\0`.
+15. A null character is not the same as a null pointer (`NULL`).
+16. Ordinary C string literals cannot contain an unescaped double quote or unescaped backslash.
+17. Multi-character constants such as `'AB'` should not be used as ordinary single-character constants.
+18. The visible effect of `\a`, `\b`, `\f`, `\r`, and `\v` depends on the terminal or output device.
 
 ---
 
 ## 🧪 Quick practice
 
-Identify each constant and choose a suitable `printf()` format specifier:
-
 ```c
-42       // Decimal integer: %d
-010      // Octal integer: %o
-0x2A     // Hexadecimal integer: %x or %X
-3.14     // Real constant: %f
-'A'      // Single character constant: %c
-'\\n'     // Escape-sequence character constant: %c
-"Hello"  // String constant: %s
+'A'       // valid single character
+' '       // valid single space
+'\n'      // valid escape-sequence character
+"A"       // one-character string, plus '\0'
+"      "  // six spaces, plus '\0'
+""        // empty string, plus '\0' when stored in an array
+'AB'      // invalid for a normal single-character lesson
+''        // invalid empty character constant
 ```
 
 <details>
-<summary>✨ Click to check your understanding</summary>
+<summary>✨ Check your understanding</summary>
 
-1. Which value represents decimal `10` in octal notation? **`012`** ✅
-2. Which specifier displays an integer in hexadecimal notation? **`%x` or `%X`** ✅
-3. Which is a string: `'C'` or `"C"`? **`"C"`** ✅
-4. Which escape sequence moves to the next line? **`\\n`** ✅
-5. Which escape sequence represents a literal backslash? **`\\\\`** ✅
-6. Which escape sequence is used for a double quote inside a string? **`\\\"`** ✅
+1. What is the length of `"      "`? **6**.
+2. What is its array size after initialization? **7**, because of the final `\0`.
+3. What does `"A\nB"` contain? **A, newline, B, and the terminating `\0`**.
+4. Is `""` a null character? **No.** It is an empty string; its array contains a terminating null character.
+5. Which prints a character: `%c` or `%s`? **`%c`**.
+6. Which prints a string? **`%s`**.
 
 </details>
 
@@ -339,21 +322,22 @@ Identify each constant and choose a suitable `printf()` format specifier:
 
 ## 📚 Quick reference
 
-| Main category | Subcategory | Example | `printf()` specifier |
+| Category | Example | Meaning | Output specifier |
 |---|---|---|---|
-| Numeric | Decimal integer | `100` | `%d` |
-| Numeric | Octal integer | `0144` | `%o` |
-| Numeric | Hexadecimal integer | `0x64` | `%x` or `%X` |
-| Numeric | Real constant | `3.14` | `%f` |
-| Character | Single character | `'A'` | `%c` |
-| Character | Escape sequence | `'\\n'` | `%c` |
-| Character | String constant | `"Hello"` | `%s` |
+| Integer | `25` | Decimal integer | `%d` |
+| Real | `3.14` | Floating-point value | `%f` |
+| Character | `'A'` | One character | `%c` |
+| Escape character | `'\n'` | One newline character | `%c` |
+| Empty string | `""` | Zero visible characters | `%s` |
+| One-character string | `"A"` | `A` plus `\0` in storage | `%s` |
+| Six-space string | `"      "` | Six spaces plus `\0` in storage | `%s` |
+| Newline string | `"A\nB"` | A, newline, B, then `\0` | `%s` |
 
 ---
 
 <div align="center">
 
-### 🎉 You can now classify, write, print, and recognize constants and escape sequences in C!
+### 🎉 You can now distinguish characters, strings, whitespace, newlines, and null characters!
 
 </div>
 
