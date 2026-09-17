@@ -195,9 +195,17 @@ Which of these are valid identifiers?
 
 ---
 
-<div align="center">
+<div align="left">
 
 ⬅️ [Previous: 01. Introduction to Tokens](01-tokens-intro.md) &nbsp;•&nbsp;
 [Next: 03. Keywords](03-keywords.md) ➡️
 
 </div>
+
+<div align="right">
+
+[Next: 03. Keywords](03-keywords.md) ➡️
+
+</div>
+
+
