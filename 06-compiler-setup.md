@@ -1,39 +1,39 @@
-## Setting up the environment and first c_programming
+## Setting up the environment and first C program
 
-To write and run C programs, you need two things: a compiler (converts your C code into a program the computer can run) and, usually, an editor or IDE (a place to write your code comfortably). Here are the common choices.
+To write and run C programs, you need two things: a compiler (which converts C source code into an executable program) and, usually, an editor or IDE (a place to write your code comfortably). Here are the basics you need to get started.
 
-C is a compiled language. Unlike interpreted languages, C source code must be converted into an executable file before running.
+C is a compiled language. Unlike interpreted languages, C source code must be converted into an executable file before it can run.
 
 ---
 
-**The 4 Stages of Compilation:**
+### The 4 Stages of Compilation:
 
-1. **Preprocessing (`.c` -> `.i`):** Removes comments and expands macros/header files (e.g., `#include <stdio.h>`).
-2. **Compilation (`.i` -> `.s`):** Translates preprocessed code into assembly code.
-3. **Assembly (`.s` -> `.o` / `.obj`):** Converts assembly code into binary machine object code.
-4. **Linking (`.o` -> `.exe`):** Combines object code with C standard library code to produce the final executable file.
+1. **Preprocessing (`.c` -> `.i`)**: Removes comments and expands macros and header files (for example, `#include <stdio.h>`).
+2. **Compilation (`.i` -> `.s`)**: Translates the preprocessed code into assembly code.
+3. **Assembly (`.s` -> `.o` / `.obj`)**: Converts the assembly code into binary machine object code.
+4. **Linking (`.o` -> `.exe`)**: Combines the object code with the C standard library to create the final executable file.
 
 ---
 
 ### Environment Setup:
 
-Available Tools to Write & Run C
+#### Available tools to write and run C
 
 > **Offline (installed on your computer):**
 
-- **VS Code** – A free, lightweight code editor. Needs a separate compiler installed, plus extensions added.
-- **Code::Blocks** – A free IDE made specifically for C/C++. Comes bundled with a compiler, so setup is simpler.
-- **Dev-C++** – Another free, beginner-friendly IDE with a bundled compiler.
-- **Turbo C++** – An old, outdated compiler. Not recommended for beginners today since it doesn't support modern systems well.
-- **Vim / Neovim** – Lightweight text editors, mainly used by more experienced programmers who prefer working from the terminal.
+- **VS Code** – A free, lightweight code editor. It needs a separate compiler installed, plus extensions.
+- **Code::Blocks** – A free IDE made specifically for C/C++. It comes bundled with a compiler, so setup is easier.
+- **Dev-C++** – Another beginner-friendly IDE with a bundled compiler.
+- **Turbo C++** – An older compiler that is not recommended for beginners today because it does not support modern systems well.
+- **Vim / Neovim** – Lightweight text editors mainly used by experienced programmers who prefer working from the terminal.
 
 > **Online (no installation needed, runs in the browser):**
 
-* **Programiz** – Simple online C compiler, good for quick practice.
-* **OnlineGDB** – Lets you write, run, and debug C code online.
-* **OneCompiler** – Another browser-based compiler for quick testing.
+- **Programiz** – A simple online C compiler, good for quick practice.
+- **OnlineGDB** – Lets you write, run, and debug C code online.
+- **OneCompiler** – Another browser-based compiler for quick testing.
 
-Online compilers are the fastest way to start practicing immediately with no setup. Installing an offline setup is better once you're ready to build real projects.
+Online compilers are great for practicing immediately without setup, but an offline setup is better once you are ready to build real projects.
 
 ---
 
@@ -42,48 +42,82 @@ Online compilers are the fastest way to start practicing immediately with no set
 **Step 1: Install VS Code**
 
 - Go to https://code.visualstudio.com.
+- Download the installer for your operating system (Windows, macOS, or Linux).
+- Run the installer and follow the on-screen steps, keeping the default options selected.
 
-- Download the installer for your operating system (Windows/Mac/Linux).
+**Step 2: Install a C Compiler**
 
-- Run the installer and follow the on-screen steps (keep default options selected).
+VS Code itself does not compile code. It needs a compiler installed separately.
 
-**Step 2: Install a C Compiler (MinGW, for Windows)**
+#### For Windows
 
-- VS Code doesn't compile code by itself — it needs a compiler installed separately.
+- Download **MinGW-w64** from https://www.mingw-w64.org or install it using **MSYS2**.
+- Install it and note the installation folder (for example, `C:\MinGW\bin`).
+- Add the compiler folder to your `PATH` so your computer can find `gcc` from any terminal.
+- To do this:
+  - Search for **Environment Variables** in the Windows search bar.
+  - Under **System variables**, find **Path** and click **Edit**.
+  - Add the path to the compiler's `bin` folder (for example, `C:\MinGW\bin`).
+  - Click **OK** to save.
+- Check if it worked by opening Command Prompt and typing:
 
-- Download MinGW-w64 from https://www.mingw-w64.org (or via MSYS2, a common installer for it).
+```bash
+gcc --version
+```
 
-- Install it, making sure to note the installation folder (e.g., C:\MinGW\bin).
+If a version number appears, the compiler is installed correctly.
 
-- Add it to PATH (so your computer knows where to find the compiler from any folder):
-Search "Environment Variables" in Windows search.
+#### For macOS
 
-- Under "System variables," find Path, click Edit, then Add.
+- Open the Terminal app.
+- Install the Xcode Command Line Tools by running:
 
-- Paste the path to the compiler's bin folder (e.g., C:\MinGW\bin).
+```bash
+xcode-select --install
+```
 
-- Click OK on all windows to save.
+- After installation, check the compiler:
 
-- To check it worked, open a terminal (Command Prompt) and type gcc --version. If it shows a version number, the compiler is correctly installed and linked.
+```bash
+gcc --version
+```
+
+If the command works, your compiler is ready.
+
+#### For Linux
+
+On Ubuntu or Debian-based systems, you can install the compiler using:
+
+```bash
+sudo apt update
+sudo apt install build-essential
+```
+
+Then verify it with:
+
+```bash
+gcc --version
+```
+
+If the version is displayed, the compiler is installed and working.
 
 **Step 3: Install VS Code Extensions**
-*Open VS Code.*
 
-- Click the Extensions icon on the left sidebar (it looks like four small squares).
-
-- Search for "C/C++" (by Microsoft) and click Install — this gives you syntax highlighting, error checking, and IntelliSense (auto-suggestions).
-
-- Search for "Code Runner" and install it — this adds a simple "Run" button so you can execute your C file with one click.
+- Open VS Code.
+- Click the **Extensions** icon in the left sidebar (it looks like four small squares).
+- Search for **C/C++** by Microsoft and click **Install**.
+  - This gives you syntax highlighting, error checking, and IntelliSense.
+- Search for **Code Runner** and install it.
+  - This adds a simple **Run** button to execute your C file with one click.
 
 **Step 4: Create a Project and File**
 
 - Create a new folder on your computer for your C projects.
+- In VS Code, go to **File → Open Folder** and select that folder.
+- Create a new file inside it named `hello.c`.
+  - The `.c` extension tells the compiler that this is a C source file.
 
-- In VS Code, go to File → Open Folder, and select that folder.
-
-- Create a new file inside it named hello.c (the .c extension tells the compiler it's a C file).
-
-*I would recommend VS code because it allows different types of programs to run in one place by downloading extensions and runs offline.*
+*I recommend VS Code because it is lightweight, flexible, and supports many tools and extensions. It works well for beginner projects and larger programs too.*
 
 ---
 
@@ -97,22 +131,45 @@ int main() {
     printf("Hello, World!\n");
     return 0;
 }
-
 ```
 
-**Breakdown of the Code:**
+**How to run it:**
 
-* ​#include <stdio.h>: Includes the Standard Input Output library header needed for printf().
-* ​int main(): The main entry point function where program execution begins.
-* ​printf("...");: Built-in C function used to output text inside double quotes to the console.
-* ​\n: Escape sequence for a new line.
-* ​return 0;: Signals to the operating system that the program executed successfully.
+#### Windows
+
+```bash
+gcc hello.c -o hello.exe
+hello.exe
+```
+
+#### macOS / Linux
+
+```bash
+gcc hello.c -o hello
+./hello
+```
+
+You should see:
+
+```bash
+Hello, World!
+```
 
 ---
 
-**​🎉  Module 01 is completed: Introduction & Environment Setup!**
+### Breakdown of the Code:
 
-[⬅️ Previous topic 05:Logic building](./05-logic-building.md) | 
+- `#include <stdio.h>`: Includes the Standard Input Output library, which provides functions like `printf()`.
+- `int main()`: The main function where the program starts running.
+- `printf("...")`: Prints text to the console.
+- `\n`: Escape sequence for a new line.
+- `return 0;`: Tells the operating system that the program executed successfully.
+
+---
+
+**🎉 Module 01 is completed: Introduction & Environment Setup!**
+
+[⬅️ Previous topic 05: Logic Building](./05-logic-building.md) | 
 
 [📋 Module 01 Index](./module-01.md) | 
 
