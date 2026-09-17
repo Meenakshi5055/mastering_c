@@ -1,28 +1,38 @@
-## 03: Keywords
+# 🔑 03 · Keywords in C
 
-**What is a Keyword?**
-A keyword is a **word that already has a fixed, special meaning** in the C language. Because the compiler reserves these words for specific purposes, they cannot be used as identifiers (names for variables, functions, etc.).
+[![C Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Level](https://img.shields.io/badge/Level-Beginner-2ea44f?style=for-the-badge)](#)
+[![C89/C90](https://img.shields.io/badge/Standard-C89%2FC90-orange?style=for-the-badge)](#)
+
+> 💡 **Quick idea:** A keyword is a reserved word with a special meaning that the C compiler already understands.
+
+---
+
+## 🧠 What is a keyword?
+
+A **keyword** is a word that has a fixed meaning in the C language. The compiler reserves it for a specific purpose, so it **cannot be used as an identifier** such as a variable, function, or structure name.
 
 ```c
 int age = 20;
 ```
-Here, `int` is a keyword — it tells the compiler "this is going to store a whole number." You can't rename `int` to mean something else.
 
----
+Here, `int` tells the compiler that `age` stores a whole number. We cannot rename `int` or use it as a variable name.
 
-### Rules for Keywords
+> ✅ **Remember:** Keywords are part of C's grammar — they are not created or redefined by the programmer.
 
-1. C has exactly **32 keywords** (as defined in the ANSI C / C89 standard).
-2. All keywords are written in **lowercase** only.
-3. They **cannot be used as identifiers** — you cannot name a variable `int` or `for`.
-4. Each keyword has a **fixed purpose** that cannot be changed by the programmer.
+## 📌 Rules to remember
 
----
+| Rule | Meaning |
+|---|---|
+| 🔢 **32 keywords** | C89/C90 defines 32 keywords. Later C standards add more. |
+| 🔡 **Lowercase only** | `int` is a keyword, but `Int` is not. C is case-sensitive. |
+| 🚫 **Reserved names** | You cannot use `for`, `int`, or `return` as identifiers. |
+| 🎯 **Fixed purpose** | Each keyword has a predefined job understood by the compiler. |
 
-### The 32 Keywords in C
+## 🧾 The 32 C89/C90 keywords
 
 | # | Keyword | # | Keyword |
-|---|---|---|---|
+|:---:|:---|:---:|:---|
 | 1 | `auto` | 17 | `int` |
 | 2 | `break` | 18 | `long` |
 | 3 | `case` | 19 | `register` |
@@ -40,45 +50,90 @@ Here, `int` is a keyword — it tells the compiler "this is going to store a who
 | 15 | `goto` | 31 | `volatile` |
 | 16 | `if` | 32 | `while` |
 
----
+## 🧩 Keywords by purpose
 
-### Keywords Grouped by Purpose (for easier understanding)
+### 🧱 Data types
+Define the kind of value a variable can store:
 
-**Data Types** — define what kind of value is stored:
-`int`, `char`, `float`, `double`, `void`, `short`, `long`, `signed`, `unsigned`
+`char` · `double` · `float` · `int` · `long` · `short` · `signed` · `unsigned` · `void`
 
-**Control Flow** — decision-making and loops:
-`if`, `else`, `switch`, `case`, `default`, `for`, `while`, `do`, `break`, `continue`, `goto`
+### 🔀 Control flow
+Control decisions, repetition, and program execution:
 
-**Storage Classes** — control how/where a variable is stored:
-`auto`, `register`, `static`, `extern`
+`break` · `case` · `continue` · `default` · `do` · `else` · `for` · `goto` · `if` · `switch` · `while`
 
-**Structures & User-Defined Types** — group data together:
-`struct`, `union`, `enum`, `typedef`
+### 💾 Storage classes
+Describe a variable's storage and lifetime:
 
-**Functions & Values** — related to functions and return behavior:
-`return`, `sizeof`
+`auto` · `extern` · `register` · `static`
 
-**Type Qualifiers** — modify how a variable behaves:
-`const`, `volatile`
+### 🧰 User-defined types
+Create or organize custom data types:
 
----
+`enum` · `struct` · `typedef` · `union`
 
-### Example Showing Multiple Keywords Together
+### 🎯 Functions and type information
+Return from a function or find a type's size:
+
+`return` · `sizeof`
+
+### 🛡️ Type qualifiers
+Modify how a value may be accessed or changed:
+
+`const` · `volatile`
+
+## 💻 Example: several keywords working together
+
 ```c
-const int MAX = 100;
+#include <stdio.h>
 
-int main() {
+int main(void) {
+    const int MAX = 5;
     static int count = 0;
+
     for (int i = 0; i < MAX; i++) {
-        if (i == 5)
+        if (i == 3) {
             break;
+        }
+        count++;
     }
+
+    printf("Count: %d\\n", count);
     return 0;
 }
 ```
-Here, `const`, `int`, `static`, `for`, `if`, `break`, and `return` are all keywords — each doing a specific, fixed job that the compiler already understands.
+
+### 🔍 Spot the keywords
+
+`const` sets a value that should not change · `int` declares whole numbers · `static` preserves a variable's lifetime · `for` repeats code · `if` checks a condition · `break` stops the loop · `return` sends a result back.
+
+## ⚠️ Common mistake
+
+```c
+int for = 10;      // ❌ Error: for is a keyword
+int total = 10;    // ✅ Correct: total is a valid identifier
+```
+
+> 🌟 **Tiny challenge:** Which keyword would you use to declare a value that should not be changed after initialization?  
+> **Answer:** `const` ✅
 
 ---
 
-⬅️ [Previous: 02. Identifiers](#) | [Next: 04. Constants](#) ➡️
+<div align="center">
+
+### 🎉 You now know the building blocks of C syntax!
+
+</div>
+
+<table width="100%">
+<tr>
+<td align="left">⬅️ <a href="02-identifiers.md">02 · Identifiers</a></td>
+<td align="right"><a href="04-constants.md">04 · Constants</a> ➡️</td>
+</tr>
+</table>
+
+<div align="center">
+
+[⬆️ Back to top](#-03--keywords-in-c)
+
+</div>
