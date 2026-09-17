@@ -67,7 +67,7 @@ Search "Environment Variables" in Windows search.
 - To check it worked, open a terminal (Command Prompt) and type gcc --version. If it shows a version number, the compiler is correctly installed and linked.
 
 **Step 3: Install VS Code Extensions**
-Open VS Code.*
+*Open VS Code.*
 
 - Click the Extensions icon on the left sidebar (it looks like four small squares).
 
