@@ -3,6 +3,7 @@
 To write and run C programs, you need two things: a compiler (converts your C code into a program the computer can run) and, usually, an editor or IDE (a place to write your code comfortably). Here are the common choices.
 
 C is a compiled language. Unlike interpreted languages, C source code must be converted into an executable file before running.
+---
 
 **The 4 Stages of Compilation:**
 
@@ -13,23 +14,23 @@ C is a compiled language. Unlike interpreted languages, C source code must be co
 
 ---
 
-**Environment Setup:**
+### Environment Setup:
 
 Available Tools to Write & Run C
 
-> *Offline (installed on your computer):
+> **Offline (installed on your computer):**
 
-VS Code – A free, lightweight code editor. Needs a separate compiler installed, plus extensions added.
-Code::Blocks – A free IDE made specifically for C/C++. Comes bundled with a compiler, so setup is simpler.
-Dev-C++ – Another free, beginner-friendly IDE with a bundled compiler.
-Turbo C++ – An old, outdated compiler. Not recommended for beginners today since it doesn't support modern systems well.
-Vim / Neovim – Lightweight text editors, mainly used by more experienced programmers who prefer working from the terminal.
+- **VS Code** – A free, lightweight code editor. Needs a separate compiler installed, plus extensions added.
+- **Code::Blocks** – A free IDE made specifically for C/C++. Comes bundled with a compiler, so setup is simpler.
+- **Dev-C++** – Another free, beginner-friendly IDE with a bundled compiler.
+- **Turbo C++** – An old, outdated compiler. Not recommended for beginners today since it doesn't support modern systems well.
+- **Vim / Neovim** – Lightweight text editors, mainly used by more experienced programmers who prefer working from the terminal.
 
-> *Online (no installation needed, runs in the browser):
+> **Online (no installation needed, runs in the browser):**
 
-* Programiz – Simple online C compiler, good for quick practice.
-* OnlineGDB – Lets you write, run, and debug C code online.
-* OneCompiler – Another browser-based compiler for quick testing.
+* **Programiz** – Simple online C compiler, good for quick practice.
+* **OnlineGDB** – Lets you write, run, and debug C code online.
+* **OneCompiler** – Another browser-based compiler for quick testing.
 
 Online compilers are the fastest way to start practicing immediately with no setup. Installing an offline setup is better once you're ready to build real projects.
 
@@ -80,8 +81,9 @@ Open VS Code.*
 . Create a new file inside it named hello.c (the .c extension tells the compiler it's a C file).
 
 I would recommend VS code because it allows different types of programs to run in one place by downloading extensions and runs offline.
+---
 
-**First C Program: "Hello, World!"**
+### First C Program: "Hello, World!"
 
 ```c
 #include <stdio.h>
