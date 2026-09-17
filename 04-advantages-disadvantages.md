@@ -2,13 +2,13 @@
 
 > **Why C is preferred (Advantages):**
 
-* Fast execution: C code runs close to machine level, so programs execute quickly with very little overhead.
-* Direct memory access: Through pointers, C lets you control memory directly — something most high-level languages don't allow.
-* Portable: The same C code can run on different computers and operating systems with little to no change.
-*Small and simple core: C has a small set of keywords and rules, making it easier to learn the fundamentals of programming.
-*Powerful and flexible: It can be used to build almost anything — operating systems, embedded devices, games, compilers, even other programming languages.
-* Large standard library and community: Decades of use mean tons of documentation, tools, and support are available.
-* Foundation for other languages: Learning C makes it much easier to understand C++, Java, Python, and how computers work internally.
+* **Fast execution:** C code runs close to machine level, so programs execute quickly with very little overhead.
+* **Direct memory access:** Through pointers, C lets you control memory directly — something most high-level languages don't allow.
+* **Portable:** The same C code can run on different computers and operating systems with little to no change.
+* **Small and simple core:** C has a small set of keywords and rules, making it easier to learn the fundamentals of programming.
+* **Powerful and flexible:** It can be used to build almost anything — operating systems, embedded devices, games, compilers, even other programming languages.
+* **Large standard library and community:** Decades of use mean tons of documentation, tools, and support are available.
+* **Foundation for other languages:** Learning C makes it much easier to understand C++, Java, Python, and how computers work internally.
 
 > **Why C is not always preferred (Disadvantages):**
 
@@ -25,8 +25,8 @@ C sits in a rare middle ground — it's readable like a high-level language but 
 > **Are there alternatives to C?**
 
 Yes. Depending on the need:
-* C++:** Adds object-oriented features while keeping C's speed and control.
-* Rust:** Aims to give C-like performance and memory control, but with built-in safety checks to prevent memory bugs.
+* **C++:** Adds object-oriented features while keeping C's speed and control.
+* **Rust:** Aims to give C-like performance and memory control, but with built-in safety checks to prevent memory bugs.
 * **Python:** Much easier to learn and write, but slower and gives no direct hardware control.
 * **Go (Golang):**
   Created by Google. Designed as a modern system language for networking and concurrency, featuring built-in garbage collection and simpler syntax.
