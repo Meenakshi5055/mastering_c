@@ -1,28 +1,29 @@
-# 🧮 07: Operators in C
+# 🧮 07: Operators in C — Learning Index
 
 ![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![Level](https://img.shields.io/badge/Level-Beginner-2ea44f?style=for-the-badge)
 ![Topic](https://img.shields.io/badge/Topic-Operators-7B61FF?style=for-the-badge)
-![Hands-on](https://img.shields.io/badge/Learning-Hands--on-2ea44f?style=for-the-badge)
+![Learning](https://img.shields.io/badge/Learning-Step--by--step-2ea44f?style=for-the-badge)
 
-> 🧭 **Lesson goal:** Learn how operators help C programs calculate, compare, decide, and update values.
+> 🧭 **Lesson goal:** Understand how operators help C programs calculate, compare, decide, update values, and work with memory.
 
 ## 🎁 What you will gain
 
-By the end of this lesson, you will be able to:
+By the end of this operator series, you will be able to:
 
-- ✅ Explain what an operator and an operand are.
-- ✅ Choose the right operator for a calculation or condition.
-- ✅ Read expressions using arithmetic, relational, and logical operators.
-- ✅ Update variables with assignment, increment, and decrement operators.
-- ✅ Understand precedence and use parentheses to make expressions clear.
-- ✅ Recognize how operators can work with bits, pointers, and conditional expressions.
+- ✅ Explain the difference between an operator, an operand, and an expression.
+- ✅ Identify unary, binary, and ternary operators.
+- ✅ Choose the right operator for calculations and comparisons.
+- ✅ Combine conditions using logical operators.
+- ✅ Update variables efficiently with assignment and increment/decrement operators.
+- ✅ Understand bitwise and shift operations at a beginner-friendly level.
+- ✅ Use parentheses to make precedence and evaluation order clear.
 
 ---
 
-## 💡 What is an operator?
+## 💡 What are operators?
 
-An **operator** is a special symbol that tells the compiler to perform an operation on one or more values. The values being operated on are called **operands**.
+An **operator** is a special symbol or keyword that tells the compiler to perform an operation on one or more values. The values acted on are called **operands**.
 
 ```c
 int sum = a + b;
@@ -34,132 +35,138 @@ In this example:
 - `a` and `b` are the **operands**.
 - `a + b` is an **expression** that produces a value.
 
-> 🌱 **Simple idea:** Operators are the action words of C. They tell your program to add, compare, assign, combine, or transform data.
+> 🌱 **Simple idea:** Operators are the action words of C. They tell your program to add, compare, assign, combine, shift, or transform data.
 
 ---
 
-## 🧩 Types of operators in C
+## 🗺️ Operators learning path
 
-Use the links below to explore each operator family. Each topic focuses on one practical idea, so you can learn step by step.
+Follow the topics in order. First learn how many operands an operator needs, then explore each operator family.
 
-| # | Operator family | What it helps you do | Common symbols |
-|:---:|---|---|---|
-| 1 | ➕ [Arithmetic operators](./arithmetic-operators.md) | Perform calculations | `+` `-` `*` `/` `%` |
-| 2 | ⚖️ [Relational operators](./relational-operators.md) | Compare values | `==` `!=` `>` `<` `>=` `<=` |
-| 3 | 🧠 [Logical operators](./logical-operators.md) | Combine conditions | `&&` `||` `!` |
-| 4 | ✍️ [Assignment operators](./assignment-operators.md) | Store or update values | `=` `+=` `-=` `*=` `/=` |
-| 5 | 🔁 [Increment & decrement operators](./increment-decrement-operators.md) | Change a value by one | `++` `--` |
-| 6 | 🧱 [Bitwise operators](./bitwise-operators.md) | Work with individual bits | `&` `|` `^` `~` `<<` `>>` |
-| 7 | ❓ [Conditional operator](./conditional-(ternary)-operator.md) | Write a compact choice | `? :` |
-| 8 | 🧰 [Special operators](./special-operators.md) | Inspect size, sequence, and memory | `sizeof` `,` `&` `*` |
+### 1. 🧩 [Operand Arity: Unary, Binary & Ternary](./operand-arity.md)
 
-> 🎯 **Recommended order:** Start with arithmetic, then learn comparisons and logic. These three groups appear frequently in `if` statements, loops, and functions.
+Learn how operators are grouped by the number of operands they use:
+
+- **Unary:** works with one operand, such as `-x`, `!ready`, or `x++`.
+- **Binary:** works with two operands, such as `a + b` or `a == b`.
+- **Ternary:** works with three parts, such as `age >= 18 ? "Adult" : "Minor"`.
+
+> 📌 **Why this comes first:** Arity is a general concept that applies to every operator family below.
 
 ---
 
-## 🔍 Operators in a real expression
+### 2. ➕ [Arithmetic Operators](./arithmetic-operators.md)
 
-```c
-#include <stdio.h>
+Perform mathematical calculations with values.
 
-int main(void) {
-    int age = 20;
-    int minimum_age = 18;
-
-    if (age >= minimum_age && age <  v 100) {
-        printf("You can continue.\n");
-    }
-
-    return 0;
-}
-```
-
-> ⚠️ The expression above contains a typo (`<  v 100`) intentionally? No—C does not understand it. The correct expression is shown below:
-
-```c
-if (age >= minimum_age && age < 100) {
-    printf("You can continue.\n");
-}
-```
-
-Here, `>=`, `<`, and `&&` compare or combine values, while `=` assigns values to variables.
+**Symbols:** `+` `-` `*` `/` `%`
 
 ---
 
-## 🧭 Three important operator ideas
+### 3. ⚖️ [Relational Operators](./relational-operators.md)
 
-### 1. Operands matter
+Compare two values and produce a true or false result.
 
-Most operators need two operands, such as `a + b`. Some need one, such as `-a` or `!ready`. The conditional operator `? :` uses three parts.
-
-### 2. Precedence controls evaluation
-
-Some operators are evaluated before others. For example, multiplication happens before addition:
-
-```c
-int result = 2 + 3 * 4;       // 14
-int clear_result = (2 + 3) * 4; // 20
-```
-
-### 3. Parentheses improve clarity
-
-Even when you know the precedence rules, parentheses make your intention easier to read and reduce mistakes:
-
-```c
-if ((score >= 50) && (attempts < 3)) {
-    printf("Passed\n");
-}
-```
-
-> ✨ **Readability tip:** Prefer a clear expression over a clever expression. Code is written once but read many times.
+**Symbols:** `==` `!=` `>` `<` `>=` `<=`
 
 ---
 
-## 🧠 Quick challenge
+### 4. 🧠 [Logical Operators](./logical-operators.md)
 
-What will this program print?
+Combine conditions or reverse a condition’s result.
+
+**Symbols:** `&&` `||` `!`
+
+---
+
+### 5. ✍️ [Assignment Operators](./assignment-operators.md)
+
+Store a value in a variable or update its current value.
+
+**Symbols:** `=` `+=` `-=` `*=` `/=` `%=`
+
+---
+
+### 6. 🔁 [Increment & Decrement Operators](./increment-decrement-operators.md)
+
+Increase or decrease a value by one.
+
+**Symbols:** `++` `--`
+
+> 🔎 You will also learn the difference between **prefix** (`++x`) and **postfix** (`x++`) forms.
+
+---
+
+### 7. 🧱 [Bitwise Operators](./bitwise-operators.md)
+
+Work directly with the individual binary bits of an integer value.
+
+**Symbols:** `&` `|` `^` `~`
+
+#### ↔️ [Subtopic: Shift Operators](./shift-operators.md)
+
+Shift the bits of a value to the left or right.
+
+**Symbols:** `<<` `>>`
+
+> 💡 Shift operators are technically bitwise operators, but they are listed separately because they are commonly taught and practiced as their own concept.
+
+---
+
+### 8. ❓ [Conditional (Ternary) Operator](./conditional-(ternary)-operator.md)
+
+Choose one of two values using a compact expression instead of a simple `if...else` statement.
+
+**Symbols:** `? :`
+
+---
+
+### 9. 🧰 [Special Operators](./special-operators.md)
+
+Explore useful operators and operator-like syntax for size, sequencing, and memory access.
+
+**Includes:**
+
+- `sizeof` — find the size of a type or object.
+- `,` — evaluate expressions in sequence.
+- `&` — get an object’s address.
+- `*` — declare a pointer or dereference a pointer.
+
+> ⚠️ Some symbols, such as `&` and `*`, have different meanings depending on context. Always read the surrounding expression carefully.
+
+---
+
+## 🧭 Quick concept check
+
+Before opening the next page, identify the arity of each operator:
 
 ```c
-#include <stdio.h>
-
-int main(void) {
-    int a = 10;
-    int b = 3;
-
-    printf("%d\n", a + b * 2);
-    printf("%d\n", (a + b) * 2);
-
-    return 0;
-}
+int total = a + b;                 // binary
+int negative = -total;             // unary
+int label = score >= 50 ? 1 : 0;   // ternary
 ```
 
 <details>
 <summary>💬 Show the answer</summary>
 
-It prints:
-
-```text
-16
-26
-```
-
-The first expression multiplies `b` before adding `a`. The parentheses in the second expression force the addition to happen first.
+- `+` is **binary** because it uses `a` and `b`.
+- `-` is **unary** because it acts on `total`.
+- `? :` is **ternary** because it uses a condition and two possible results.
 
 </details>
 
 ---
 
-## ✅ Key takeaways
+## 🧠 Remember
 
 - Operators perform actions on operands.
-- Arithmetic operators calculate values.
-- Relational operators compare values.
-- Logical operators combine conditions.
-- Assignment operators store or update values.
+- **Arity** tells you how many operands an operator needs.
 - Precedence and associativity affect evaluation order.
-- Parentheses make expressions safer and easier to understand.
+- Parentheses can make an expression easier to read and can force the order you want.
+- The same symbol can have different meanings in different contexts.
 
-> 🚀 **Ready to practice?** Begin with [Arithmetic Operators](./arithmetic-operators.md) and turn simple values into useful calculations.
+> 🚀 **Start here:** [Operand Arity: Unary, Binary & Ternary](./operand-arity.md)  
+> Then continue through each operator family one concept at a time.
 
 ---
 
@@ -170,5 +177,5 @@ The first expression multiplies `b` before adding `a`. The parentheses in the se
 <br>
 
 <div align="right">
-  <a href="./arithmetic-operators.md">Next: Arithmetic Operators</a> ➡️
+  <a href="./operand-arity.md">Next: Operand Arity</a> ➡️
 </div>
