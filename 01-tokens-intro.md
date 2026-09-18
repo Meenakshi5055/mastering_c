@@ -224,5 +224,11 @@ When you learn to recognize tokens, you can begin to read C code step by step in
 In the next topic, we will explore **identifiers** and learn how to create valid names for variables and functions.
 
 ---
+<div align="left">
+<a href="./module-02.md">📋 Back to Module 02 Index</a>
+</div>
 
-[📋 Back to Module 02 Index](./module-02.md) | [➡️ Next Topic 02: Identifiers](./02-identifiers.md)
+<div align="right">
+<a href="./02-identifiers.md">➡️ Next Topic 02: Identifiers</a>
+</div>
+
