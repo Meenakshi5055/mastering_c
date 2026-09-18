@@ -5,8 +5,8 @@
 [![Language](https://img.shields.io/badge/Language-C-0f172a?style=for-the-badge)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![Compiler](https://img.shields.io/badge/Setup-GCC%20%2F%20Clang-ff6b35?style=for-the-badge)](#install-and-verify-a-compiler)
 
-> 🌱 **Welcome to your first real C setup!**
-> This topic helps you install the tools, write your first program, compile it, and understand what happens behind the scenes. By the end, you will be able to run C code on your computer with confidence.
+> 🌱 **Welcome to your first real C setup!**  
+> This topic helps you install the tools, write your first program, compile it, and understand what happens behind the scenes. By the end, you’ll be able to run C code on your computer with confidence.
 
 ## 🎯 Learning objectives
 
@@ -30,7 +30,7 @@ After completing this lesson, you will be able to:
 - ✅ debug basic compiler errors;
 - ✅ understand the flow from source code to a final executable.
 
-> 🧠 **Simple idea:**
+> 🧠 **Simple idea:**  
 > Your editor helps you write code. The compiler translates that code into something the computer can run.
 
 ---
@@ -52,7 +52,7 @@ C is a compiled language. Unlike Python or JavaScript, C source code must be con
 hello.c → preprocessing → compilation → assembly → linking → hello.exe / hello
 ```
 
-> 🔍 **Why this matters:**
+> 🔍 **Why this matters:**  
 > If there is a problem with a header, syntax, variable, or library, it can show up at different stages of compilation. Understanding this helps you fix errors faster.
 
 ---
@@ -275,7 +275,7 @@ Then your compiler is not installed correctly or not added to `PATH`. Check the 
 
 The compiler may not treat it as a C source file, because it expects a `.c` extension.
 
-> 🧠 **Operator reminder:**
+> 🧠 **Operator reminder:**  
 > Operators like `+`, `-`, `*`, `/`, `%`, `==`, `&&`, and `||` are introduced later. They perform actions on values. Example: `2 + 3` gives `5`.
 
 ---
