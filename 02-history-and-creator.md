@@ -123,6 +123,8 @@ Its age is not its only measure of value. C is fast, portable, widely supported,
 
 C grew from practical systems-programming needs. It became influential because it combines **portability, efficiency, and hardware control**—a balance that continues to make it valuable today.
 
+---
+
 <p align="left">
   ⬅️ <a href="./01-definition-and-overview.md">Previous topic: Definition &amp; Overview</a>
 </p>
