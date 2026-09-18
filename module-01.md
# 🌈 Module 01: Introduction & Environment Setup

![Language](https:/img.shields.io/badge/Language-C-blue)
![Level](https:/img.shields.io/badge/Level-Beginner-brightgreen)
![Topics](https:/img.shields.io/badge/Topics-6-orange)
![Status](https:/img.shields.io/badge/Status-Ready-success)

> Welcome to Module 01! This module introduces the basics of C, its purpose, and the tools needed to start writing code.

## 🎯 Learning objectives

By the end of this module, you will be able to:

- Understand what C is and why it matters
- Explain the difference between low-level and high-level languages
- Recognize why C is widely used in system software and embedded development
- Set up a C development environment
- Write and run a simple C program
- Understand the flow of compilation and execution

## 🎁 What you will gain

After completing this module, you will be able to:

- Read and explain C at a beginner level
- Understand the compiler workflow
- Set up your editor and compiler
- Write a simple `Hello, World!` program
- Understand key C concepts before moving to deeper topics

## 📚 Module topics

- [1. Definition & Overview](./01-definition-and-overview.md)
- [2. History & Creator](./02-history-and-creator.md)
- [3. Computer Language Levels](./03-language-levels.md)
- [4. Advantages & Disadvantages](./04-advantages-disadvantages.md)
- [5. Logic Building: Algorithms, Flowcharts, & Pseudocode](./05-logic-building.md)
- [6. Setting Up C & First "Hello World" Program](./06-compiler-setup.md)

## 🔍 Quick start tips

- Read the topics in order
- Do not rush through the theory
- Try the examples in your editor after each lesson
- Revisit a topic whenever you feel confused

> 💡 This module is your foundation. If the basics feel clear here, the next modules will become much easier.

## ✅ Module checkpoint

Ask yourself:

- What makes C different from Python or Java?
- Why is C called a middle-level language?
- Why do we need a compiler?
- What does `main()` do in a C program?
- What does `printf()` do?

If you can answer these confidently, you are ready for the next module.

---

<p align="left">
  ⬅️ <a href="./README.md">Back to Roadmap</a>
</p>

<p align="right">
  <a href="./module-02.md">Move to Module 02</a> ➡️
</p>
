@@ -1,0 +1,88 @@
+# mastering_c
+### A comprehensive, organized C programming. Starting point for beginners to build strong fundamentals step-by-step.
+
+![Language](https://img.shields.io/badge/Language-C-blue)
+![Level](https://img.shields.io/badge/Level-Beginner-brightgreen)
+![Topics](https://img.shields.io/badge/Modules-9-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+> 💡 This repository is designed to help beginners understand C in a calm, structured, and friendly way.
+
+## 🚀 What you will gain
+
+By following this roadmap, you will be able to:
+
+- Understand the fundamentals of C programming
+- Learn the building blocks of a C program
+- Write and run your first C programs
+- Learn logic, structure, and problem-solving flow
+- Understand identifiers, keywords, operators, functions, memory, pointers, arrays, and strings
+- Build a strong base before moving to real-world C projects
+
+## 📚 Learning roadmap
+
+Click on any module below to open its detailed lesson page:
+
+- [Module 01: Introduction & Environment Setup](./module-01.md)
+- [Module 02: C Tokens & Building Blocks](./module-02.md)
+- [Module 03: Variables, Data Types & Type Conversion](./module-03.md)
+- [Module 04: Control Statements](./module-04.md)
+- [Module 05: Loops & Iteration](./module-05.md)
+- [Module 06: Functions](./module-06.md)
+- [Module 07: Pointers & Memory Management](./module-07.md)
+- [Module 08: Arrays](./module-08.md)
+- [Module 09: Strings](./module-09.md)
+
+## ✅ Golden Rules of C Programming
+
+No matter how basic or advanced your program gets, these fundamental rules always apply:
+
+1. **Case Sensitivity:**
+   C is strictly case-sensitive (`Main`, `MAIN`, and `main` are completely different).
+2. **Main Entry Point:**
+   Every executable C program must have exactly one `main()` function.
+3. **Semicolons `;`:**
+   Every individual statement must end with a semicolon `;`.
+4. **Header Files:**
+   Include required libraries at the top before using functions like `printf()`.
+5. **Block Scope:**
+   Code blocks are enclosed in `{ }` and must be properly matched.
+
+## 🌟 How to use this repository
+
+- Start from `Module 01` if you are a complete beginner.
+- Read the theory carefully.
+- Try the examples in your compiler or editor.
+- Practice small exercises before moving to the next module.
+- Revisit older topics whenever you feel stuck.
+
+> 💡 The goal is not only to memorize syntax, but to understand how the pieces fit together.
+
+## 🧠 What users can gain from this repo
+
+Users who follow this repository can gain:
+
+- Confidence in reading C code
+- A systematic understanding of C syntax
+- Better debugging skills
+- A strong base for competitive programming, embedded systems, and system-level programming
+- Clear understanding of how programs are built from tokens to statements to functions
+
+## 🗂️ Quick start
+
+If you are starting now, follow this order:
+
+1. Read `module-01.md`
+2. Continue to `module-02.md`
+3. Finish each topic with examples and practice
+4. Move forward only when the concept feels clear
+
+## 📌 Final note
+
+C may look strict at first, but once you understand the rules, it becomes much easier to reason about programs and errors.
+
+This repository aims to make that journey simple, practical, and beginner-friendly.
+
+---
+
+[⬅️ Back to top](#mastering_c) | [➡️ Start with Module 01](./module-01.md)

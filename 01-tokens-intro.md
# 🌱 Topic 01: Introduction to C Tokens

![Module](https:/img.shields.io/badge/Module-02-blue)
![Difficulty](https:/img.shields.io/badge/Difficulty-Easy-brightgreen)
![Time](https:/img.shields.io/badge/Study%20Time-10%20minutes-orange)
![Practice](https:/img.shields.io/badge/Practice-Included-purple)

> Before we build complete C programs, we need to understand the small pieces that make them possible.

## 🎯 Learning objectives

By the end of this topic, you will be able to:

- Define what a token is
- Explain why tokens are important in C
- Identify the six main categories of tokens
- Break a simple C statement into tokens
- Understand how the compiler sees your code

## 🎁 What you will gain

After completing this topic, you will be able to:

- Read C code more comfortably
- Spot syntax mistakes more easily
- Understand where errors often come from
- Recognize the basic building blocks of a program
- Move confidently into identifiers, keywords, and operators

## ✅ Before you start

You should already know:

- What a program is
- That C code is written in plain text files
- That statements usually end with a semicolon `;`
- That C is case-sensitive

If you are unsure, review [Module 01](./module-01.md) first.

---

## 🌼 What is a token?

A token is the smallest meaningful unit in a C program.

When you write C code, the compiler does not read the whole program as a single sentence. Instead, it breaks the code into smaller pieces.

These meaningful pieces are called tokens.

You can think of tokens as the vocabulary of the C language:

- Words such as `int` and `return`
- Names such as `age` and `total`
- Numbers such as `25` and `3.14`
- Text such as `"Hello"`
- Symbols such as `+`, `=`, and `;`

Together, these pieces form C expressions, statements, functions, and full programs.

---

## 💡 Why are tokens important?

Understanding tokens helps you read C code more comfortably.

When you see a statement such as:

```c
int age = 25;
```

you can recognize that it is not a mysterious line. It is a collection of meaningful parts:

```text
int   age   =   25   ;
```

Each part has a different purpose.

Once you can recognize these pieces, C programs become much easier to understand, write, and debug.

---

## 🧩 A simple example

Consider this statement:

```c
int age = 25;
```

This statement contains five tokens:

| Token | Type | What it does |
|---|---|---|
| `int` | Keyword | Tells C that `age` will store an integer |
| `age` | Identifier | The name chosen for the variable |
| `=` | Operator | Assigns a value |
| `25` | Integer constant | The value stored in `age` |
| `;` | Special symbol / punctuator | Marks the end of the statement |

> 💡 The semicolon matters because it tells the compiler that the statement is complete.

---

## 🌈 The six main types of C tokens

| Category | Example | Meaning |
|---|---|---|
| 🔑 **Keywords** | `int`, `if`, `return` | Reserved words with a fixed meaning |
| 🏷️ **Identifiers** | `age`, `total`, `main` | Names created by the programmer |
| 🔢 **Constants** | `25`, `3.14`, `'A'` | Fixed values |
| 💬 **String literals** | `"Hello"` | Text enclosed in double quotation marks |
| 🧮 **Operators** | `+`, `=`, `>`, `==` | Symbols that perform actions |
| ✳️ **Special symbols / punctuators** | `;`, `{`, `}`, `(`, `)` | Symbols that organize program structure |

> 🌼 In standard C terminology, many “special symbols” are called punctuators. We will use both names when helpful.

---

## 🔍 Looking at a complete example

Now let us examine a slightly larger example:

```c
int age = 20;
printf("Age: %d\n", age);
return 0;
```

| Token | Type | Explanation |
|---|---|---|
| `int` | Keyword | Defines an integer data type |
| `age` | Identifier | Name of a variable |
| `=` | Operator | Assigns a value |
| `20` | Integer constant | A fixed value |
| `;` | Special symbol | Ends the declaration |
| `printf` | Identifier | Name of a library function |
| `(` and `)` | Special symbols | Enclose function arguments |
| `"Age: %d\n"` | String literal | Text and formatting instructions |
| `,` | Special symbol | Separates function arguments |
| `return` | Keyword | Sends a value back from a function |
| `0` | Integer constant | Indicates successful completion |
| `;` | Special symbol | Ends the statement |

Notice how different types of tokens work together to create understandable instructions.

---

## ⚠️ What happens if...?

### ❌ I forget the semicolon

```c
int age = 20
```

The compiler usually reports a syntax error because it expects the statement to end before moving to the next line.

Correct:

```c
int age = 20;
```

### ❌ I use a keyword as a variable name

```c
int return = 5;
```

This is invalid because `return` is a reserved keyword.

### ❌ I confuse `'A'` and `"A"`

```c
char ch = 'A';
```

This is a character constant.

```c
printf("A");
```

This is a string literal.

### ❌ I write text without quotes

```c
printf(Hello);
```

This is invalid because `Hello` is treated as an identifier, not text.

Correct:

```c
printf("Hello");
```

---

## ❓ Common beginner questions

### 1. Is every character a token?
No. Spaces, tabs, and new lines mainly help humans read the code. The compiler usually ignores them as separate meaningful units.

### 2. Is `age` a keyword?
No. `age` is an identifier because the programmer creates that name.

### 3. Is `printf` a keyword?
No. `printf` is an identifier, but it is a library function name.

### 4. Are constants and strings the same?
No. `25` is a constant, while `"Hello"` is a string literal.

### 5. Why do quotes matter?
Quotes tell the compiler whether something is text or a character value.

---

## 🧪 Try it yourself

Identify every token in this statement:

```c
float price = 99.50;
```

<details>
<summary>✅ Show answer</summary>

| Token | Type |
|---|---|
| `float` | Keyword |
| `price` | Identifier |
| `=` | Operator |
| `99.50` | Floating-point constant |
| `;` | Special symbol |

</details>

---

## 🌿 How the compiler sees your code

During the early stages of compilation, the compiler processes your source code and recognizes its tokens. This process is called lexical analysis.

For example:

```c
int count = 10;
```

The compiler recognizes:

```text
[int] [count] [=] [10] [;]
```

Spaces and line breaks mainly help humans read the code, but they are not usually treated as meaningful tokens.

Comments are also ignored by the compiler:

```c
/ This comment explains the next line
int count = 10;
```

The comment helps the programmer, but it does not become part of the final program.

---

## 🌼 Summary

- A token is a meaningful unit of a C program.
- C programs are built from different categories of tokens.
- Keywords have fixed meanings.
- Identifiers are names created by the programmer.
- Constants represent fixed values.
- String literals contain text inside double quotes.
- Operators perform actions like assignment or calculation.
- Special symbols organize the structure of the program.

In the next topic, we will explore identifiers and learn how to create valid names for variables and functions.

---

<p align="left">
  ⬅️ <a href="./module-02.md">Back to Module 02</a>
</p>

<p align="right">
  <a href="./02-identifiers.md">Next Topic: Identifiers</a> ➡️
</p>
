@@ -1,0 +1,101 @@
+# 🌈 Module 02: C Tokens & Building Blocks
+
+![Language](https://img.shields.io/badge/Language-C-blue)
+![Level](https://img.shields.io/badge/Level-Beginner-brightgreen)
+![Topics](https://img.shields.io/badge/Topics-8-orange)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+
+> Welcome! In this module, you will learn the small pieces that make every C program possible.
+
+## 🎯 Learning objectives
+
+By the end of this module, you will be able to:
+
+- Explain what C tokens are and why they are important
+- Identify identifiers, keywords, constants, string literals, operators, and special symbols
+- Distinguish valid and invalid identifiers
+- Use operators and symbols to construct C expressions
+- Recognize the structure of a basic C program
+
+## 🎁 What you will gain
+
+After completing this module, you will be able to:
+
+- Break down C statements into smaller meaningful parts
+- Understand how the compiler reads your source code
+- Spot syntax errors more quickly
+- Read C code with more confidence
+- Build a strong base before learning variables, loops, and functions
+
+## 🗺️ Your learning path
+
+| Step | Topic | Focus |
+|---|---|---|
+| 01 | 🧱 [Introduction to C Tokens](./01-tokens-intro.md) | Understand the building blocks |
+| 02 | 🏷️ [Identifiers](./02-identifiers.md) | Learn how names are created |
+| 03 | 🔑 [Keywords](./03-keywords.md) | Explore reserved words |
+| 04 | 🔢 [Constants](./04-constants.md) | Work with fixed values |
+| 05 | 💬 [String Literals](./05-strings.md) | Understand text in C |
+| 06 | ✳️ [Special Symbols](./06-special-symbols.md) | Learn punctuation and structure |
+| 07 | 🧮 [Operators](./07-operators.md) | Perform actions and calculations |
+| 08 | 🗂️ [Program Structure](./08-program-structure.md) | Put the pieces together |
+
+## 📌 How to use this module
+
+Read each topic in order and pay attention to the examples.
+
+You do not need to memorize every detail on your first reading. Focus on understanding the role of each token and how the pieces work together.
+
+> 💡 Think of this module as learning the alphabet and vocabulary of C. Once you know the building blocks, writing complete programs becomes easier.
+
+## ❓ Common beginner doubts
+
+### 1. Why do we need to learn tokens?
+Because the compiler reads code as small meaningful parts. If you understand the basic building blocks, debugging becomes much easier.
+
+### 2. Are spaces important?
+Spaces mainly help humans read the code. The compiler usually ignores extra spaces between tokens.
+
+### 3. What if I write a keyword as a variable name?
+The compiler will reject it because keywords are reserved.
+
+### 4. What is the difference between a constant and a string?
+A constant is a fixed value like `25` or `3.14`. A string is text enclosed in double quotes like `"Hello"`.
+
+### 5. What happens if I forget a semicolon?
+The compiler usually reports a syntax error, because it expects the statement to finish.
+
+## 🧪 Module practice
+
+After completing all eight topics, try to identify every token in this program:
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    int age = 20;
+    printf("Age: %d\n", age);
+    return 0;
+}
+```
+
+Ask yourself:
+
+- Which tokens are keywords?
+- Which tokens are identifiers?
+- Which tokens are constants?
+- Which token is a string literal?
+- Which tokens are operators or special symbols?
+
+> 🌱 You do not need to solve this perfectly on the first attempt. The goal is to practice seeing a C program as a collection of meaningful building blocks.
+
+---
+
+<p align="left">
+  ⬅️ <a href="./module-01.md">Back to Module 01</a>
+</p>
+
+<p align="right">
+  <a href="./module-03.md">Move to Module 03</a> ➡️
+</p>
+
