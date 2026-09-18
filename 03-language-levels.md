@@ -272,9 +272,10 @@ printf("%.1f\n", 5.0 / 2.0);  // Prints 2.5
 
 ---
 
-<div align=left>
+<div align="left">
   <a href="./02-history-and-creator.md">⬅️ Previous: History &amp; Creator</a>
   </div>
-  <div align=left>
+  
+  <div align="right">
 <a href="./04-advantages-disadvantages.md">Next: Advantages &amp; Disadvantages ➡️</a>
 </div>
