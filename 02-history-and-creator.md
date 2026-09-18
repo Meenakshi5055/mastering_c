@@ -86,27 +86,27 @@ C remains common in:
 
 ## ❓ Common doubts
 
-### 1. Was C created before Unix?
+**1. Was C created before Unix?**
 
 No. C was developed during the early Unix project and was then used to rewrite much of Unix.
 
-### 2. Is C the same as B?
+**2. Is C the same as B?**
 
 No. B influenced C, but C added stronger data types and capabilities that made it more suitable for larger systems.
 
-### 3. What happens if I use an operator in C?
+**3. What happens if I use an operator in C?**
 
 An operator performs an action on one or more operands. For example, `total = price + tax;` uses `=` for assignment and `+` for addition. The result depends on the operator and the data types involved. Operators are covered in detail in a later topic.
 
-### 4. What if I use `/` instead of `%`?
+**4. What if I use `/` instead of `%`?**
 
 `/` calculates a quotient, while `%` calculates a remainder when working with integers. For example, `7 / 2` produces `3` in integer arithmetic, while `7 % 2` produces `1`.
 
-### 5. Why can C be powerful but dangerous?
+**5. Why can C be powerful but dangerous?**
 
 C gives programmers direct control over memory. That control is useful for performance, but mistakes such as using an uninitialised pointer or accessing an array outside its bounds can cause crashes or security problems.
 
-### 6. Why is C still used if it is old?
+**6. Why is C still used if it is old?**
 
 Its age is not its only measure of value. C is fast, portable, widely supported, and useful when performance and hardware control matter.
 
