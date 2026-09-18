@@ -87,5 +87,10 @@ Manual memory management gives you control and can improve performance, but mist
 > **C gives you exceptional control and performance—but that power requires careful programming, testing, and responsible memory management.**
 
 ---
+<div align="left>
 
-[⬅️ Previous topic: Computer Language Levels](./03-language-levels.md) | [➡️ Next topic: Logic Building](./05-logic-building.md)
+[⬅️ Previous topic: Computer Language Levels](./03-language-levels.md) 
+</div>
+<div align="right">
+[➡️ Next topic: Logic Building](./05-logic-building.md)
+</div>
