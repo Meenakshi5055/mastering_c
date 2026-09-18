@@ -88,9 +88,9 @@ Manual memory management gives you control and can improve performance, but mist
 
 ---
 <div align="left>
-
-[⬅️ Previous topic: Computer Language Levels](./03-language-levels.md) 
+<a href="./03-language-levels.md">⬅️ Previous topic: Computer Language Levels</a>
 </div>
+
 <div align="right">
-[➡️ Next topic: Logic Building](./05-logic-building.md)
+<a href="./05-logic-building.md">➡️ Next topic: Logic Building</a>
 </div>
