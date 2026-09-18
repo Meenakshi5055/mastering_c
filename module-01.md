@@ -67,19 +67,19 @@ Follow this order:
 
 ## ❓ Common beginner doubts
 
-### 1. Why should I learn C when there are easier languages?
+ **1. Why should I learn C when there are easier languages?**
 C teaches you how software works at a deeper level. It helps you understand memory, compilation, logic, and how programming languages operate internally.
 
-### 2. Do I need a computer science degree to learn C?
+ **2. Do I need a computer science degree to learn C?**
 No. You can begin with the basics and learn step by step. This repository is designed for beginners.
 
-### 3. What if I do not understand the theory at first?
+ **3. What if I do not understand the theory at first?**
 That is normal. Programming becomes clearer when you combine theory with practice. Read the topic, then try the example in your editor.
 
-### 4. What is the most important part of this module?
+ **4. What is the most important part of this module?**
 The most important part is understanding the foundation: C is compiled, structured, and logic-driven. Once that is clear, later topics become easier.
 
-### 5. What happens if I skip the setup part?
+ **5. What happens if I skip the setup part?**
 You will not be able to run programs properly. The setup section is important because it makes your learning practical.
 
 ---
