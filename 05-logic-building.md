@@ -227,9 +227,9 @@ If you can answer these questions, you are already building the logic correctly.
 ---
 
 <div align="left">
-  <a href="./04-advantages-disadvantages.md">⬅️ Previous Topic</a>
+  <a href="./04-advantages-disadvantages.md">⬅️ Previous Topic: Advantages and Disadvantages</a>
 </div>
 
 <div align="right">
-  <a href="./06-compiler-setup.md">Next Topic ➡️</a>
+  <a href="./06-compiler-setup.md">Next Topic: Compiler setup ➡️</a>
 </div>
