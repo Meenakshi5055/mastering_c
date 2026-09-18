@@ -272,7 +272,9 @@ printf("%.1f\n", 5.0 / 2.0);  // Prints 2.5
 
 ---
 
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+<div align=left>
   <a href="./02-history-and-creator.md">⬅️ Previous: History &amp; Creator</a>
-  <a href="./04-advantages-disadvantages.md">Next: Advantages &amp; Disadvantages ➡️</a>
+  </div>
+  <div align=left>
+<a href="./04-advantages-disadvantages.md">Next: Advantages &amp; Disadvantages ➡️</a>
 </div>
